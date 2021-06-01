@@ -1,0 +1,334 @@
+/* Tablet and Mobile */
+@media (max-width: 1024px) {
+  .hide-on-mobile-tablet {
+    display: none;
+  }
+
+  /* main menu */
+  .MainMenu_primaryMenuItem {
+    font-size: 55px;
+  }
+  .MainMenu_imageMenuContainer,
+  .MainMenu_tertiaryMenuContainer,
+  .MainMenu_shareTitle {
+    display: none;
+  }
+  .ShareBar_socialContainer {
+    width: 6vw;
+    height: 6vw;
+  }
+  .MainMenu_bottomContainer {
+    flex-direction: column;
+  }
+  .MainMenu_primaryMenuContainer,
+  .MainMenu_secondaryMenuContainer,
+  .MainMenu_shareContainer {
+    width: 100%;
+  }
+  .MainMenu_shareContainer {
+    padding: 50px 0;
+  }
+  .CoverBlock {
+    margin-bottom: 80px;
+  }
+  .MenuIcon {
+    margin-right: 0;
+  }
+  .MenuBar_menuButton,
+  .MenuBar_PlusMenu {
+    width: 50px;
+  }
+  .MenuButton_Title,
+  .MenuBar_PlusMenuButton {
+    display: none;
+  }
+  .CoverBlock_mainContainer {
+    width: 92vw;
+  }
+  .CoverBlock_postTitle {
+    width: 100%;
+  }
+  .CoverBlock_formatLink {
+    font-size: 0.875em;
+  }
+  .CoverBlock_postTitle {
+    font-size: 2.25em;
+    line-height: 1em;
+    margin-top: 0.25em;
+  }
+  .CoverBlock_post {
+    margin-bottom: 30px;
+  }
+  .CoverBlock_more {
+    display: none;
+  }
+  /* Folder view block */
+  .FolderPreviewBlock.Tablet.Mobile {
+    display: block;
+  }
+  .FolderPreviewBlock_wrapper {
+    height: auto;
+  }
+  .FolderPreviewBlock_mainContainer {
+    width: 100vw;
+    margin: 0;
+    height: auto;
+  }
+  .FolderPreviewBlock_responsiveImageWrapper {
+    position: relative;
+  }
+
+  .FolderPreviewBlock_responsiveImage.ResponsiveImage-backgroundImage {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .FolderPreviewBlock_responsiveImage {
+    background-size: cover;
+  }
+  .FolderPreviewBlock_responsiveImageContainer {
+    height: 56.25vw;
+  }
+
+  .FolderPreviewBlock_responsiveImageContainer {
+    height: 56.25vw;
+  }
+  .FolderPreviewBlock_previewContainer {
+    position: relative;
+    width: 100vw;
+  }
+  .FolderPreviewBlock_previewContent {
+    width: 100vw;
+  }
+  .FolderPreviewBlock_categoryLink,
+  .FolderPreviewBlock_description {
+    font-size: 14px;
+  }
+  .FolderPreviewBlock_title {
+    font-size: 33px;
+    margin: 10px 0;
+  }
+  /* slide show block */
+  .next,
+  .prev {
+    display: none;
+  }
+  .SlideshowPreviewBlock .Slideshow_wrapper {
+    width: 100vw;
+    margin: 0 auto;
+  }
+  .SlideshowPreviewBlock_formatLink {
+    width: 87.5vw;
+    margin: 0 auto;
+  }
+  .SlideshowPreviewBlock_wrapper {
+    padding: 0;
+  }
+  /* newlette block */
+
+  .NewsletterBlock_wrapper {
+    flex-direction: column;
+    align-items: center;
+    padding: 6.25vw;
+  }
+  .NewsletterBlock_content-first {
+    width: fit-content;
+  }
+  .NewsletterBlock_content-last {
+    width: 100%;
+  }
+  .NewsletterBlock_imageContainer {
+    display: block;
+    height: 43.75vw;
+    width: 43.75vw;
+  }
+  .NewsletterBlock_mailbox {
+    width: 29.166625vw;
+    height: 31.95796216vw;
+    background-size: 95.93085254vw 79.75249023vw;
+    background-position: -66.65029541vw -0.11393213vw;
+  }
+  .NewsletterBlock_mailhand {
+    width: 3.64582813vw;
+    height: 16.63409082vw;
+    background-size: 95.93085254vw 79.75249023vw;
+    background-position: -0.11393213vw -63.00446729vw;
+  }
+  .NewsletterBlock_content {
+    width: 100%;
+    padding: 6.25vw;
+  }
+  /* Footer */
+  .Footer_logoUbisoft {
+    margin-right: 20px;
+    width: 109.2px;
+    height: 36px;
+    background-position: -351px -264.9px;
+    background-size: 505.2px 420px;
+  }
+  .Footer_primaryContainer {
+    margin: 3% 0;
+  }
+  .Footer_secondaryContainer {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    margin: 0;
+  }
+  .Footer_navLinks {
+    display: inline-block;
+    margin: 5px 30px;
+    font-size: 14px;
+  }
+  .Footer_navLinks::before {
+    display: none;
+  }
+  .Footer_copyrightBar {
+    font-size: 14px;
+  }
+
+
+  /* BRAINS PAGE */
+  .ListHeaderBlock_title {
+    font-size: 50px;
+    line-height: 50px;
+  }
+  .ListHeaderBlock_watermark {
+    display: none;
+  }
+  .ListHeaderBlock_more {
+    display: none;
+  }
+  .SplittedPreviewBlock_link {
+    display: none;
+  }
+  .SplittedPreviewBlock_mainContainer {
+    width: 100vw;
+  }
+  .SplittedPreviewBlock_previewContainer {
+    width: 87.5vw;
+    margin: 3.125vw 6.25vw 8.75vw 6.25vw;
+  }
+  .SplittedPreviewBlock {
+    font-size: 14px;
+  }
+  .SplittedPreviewBlock_title {
+    font-size: 33px;
+  }
+  .SplittedPreviewBlock_watermark {
+    font-size: 220px;
+  }
+  .GridBlock_mainContainer {
+    justify-content: center;
+  }
+  .GridBlock_mainContainer .PostPreview {
+    width: 100%;
+  }
+  .PostPreview.PostPreview-void {
+    display: none;
+  }
+  .DataStandaloneBlock_formatLink,
+  .DataStandaloneBlock_content {
+    font-size: 14px;
+  }
+  .DataNumber {
+    font-size: 384px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+  .StoriesLogo_topLine,
+  .StoriesLogo_bottomLine {
+    font-size: 1.4vw;
+    line-height: 18px;
+  }
+  
+  /* triple block */
+
+  .TripleBlock_title {
+    width: 100%;
+  }
+  .TripleBlock_title {
+    font-size: 200px;
+  }
+  .PostPreview {
+    width: 40vw;
+  }
+}
+
+/* Mobile */
+@media (max-width: 740px) {
+  .StoriesLogo_stories {
+    width: 62.5vw;
+    height: 29.42439863vw;
+    background-size: 90.4209622vw 75.17182131vw;
+    background-position: -0.10738832vw -29.74656357vw;
+  }
+  .StoriesLogo_topLine {
+    top: -12px;
+    font-size: 3vw;
+  }
+  .StoriesLogo_bottomLine {
+    font-size: 1.8vw;
+    top: 19.5vw;
+    left: 60.2vw;
+  }
+  .CoverBlock_postTitle {
+    font-size: 22px;
+  }
+  .TripleBlock_mainContainer {
+    justify-content: center;
+  }
+  .TripleBlock_title {
+    font-size: 90px;
+    margin-top: 56px;
+    transform: translateY(-80px);
+  }
+  .PostPreview {
+    width: 80vw;
+  }
+  .SlideshowPreviewBlock_formatLink {
+    font-size: 14px;
+  }
+  .SlideshowPreviewBlock_title {
+    font-size: 33px;
+  }
+  .NewsletterBlock_mail {
+    width: 50vw;
+  }
+  .NewsletterBlock_title {
+    font-size: 25px;
+  }
+  .NewsletterBlock_description {
+    font-size: 16px;
+    line-height: 25px;
+  }
+  .NewsletterBlock_mail {
+    font-size: 16px;
+  }
+  .NewsletterBlock_submit {
+    font-size: 15px;
+  }
+  .LoadMoreBlock_text {
+    font-size: 25px;
+  }
+  .Footer_logoUbisoft {
+    margin-left: 0;
+    width: 35px;
+  }
+  .DataNumber {
+    font-size: 187.5px;
+  }
+  .DataStandaloneBlock_content {
+    margin-left: 0;
+    margin-right: 0;
+    width: 90%;
+  }
+  .ShareBar_socialContainer {
+    width: 12vw;
+    height: 12vw;
+  }
+}

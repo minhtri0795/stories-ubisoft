@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="https://static-wordpress.akamaized.net/stories.ubisoft.com/public/assets/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="stylesheet" href="../assets/font/font-awsome/css/all.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/responsive.css" />
+    <title>Hand Achives</title>
+  </head>
+  <body>
+    <div class="AppContainer">
+      <div class="MenuBar">
+        <div class="MenuBar_ButtonContainer">
+          <div
+            class="MenuBar_menuButton"
+            onclick="toogleMenu()"
+            style="transform: matrix(1, 0, 0, 1, 0, 0)"
+          >
+            <div class="MenuIcon">
+              <svg viewBox="0 0 15 12">
+                <path
+                  class="MenuBar_IconLine"
+                  d="M1,10h13c0.6,0,1,0.4,1,1c0,0.6-0.4,1-1,1H1c-0.6,0-1-0.4-1-1C0,10.4,0.4,10,1,10L1,10z"
+                ></path>
+                <path
+                  class="MenuBar_IconLine"
+                  d="M1,5h13c0.6,0,1,0.4,1,1c0,0.6-0.4,1-1,1H1C0.4,7,0,6.6,0,6C0,5.4,0.4,5,1,5L1,5z"
+                ></path>
+                <path
+                  class="MenuBar_IconLine"
+                  d="M1,0h13c0.6,0,1,0.4,1,1c0,0.6-0.4,1-1,1H1C0.4,2,0,1.6,0,1C0,0.4,0.4,0,1,0L1,0z"
+                ></path>
+              </svg>
+            </div>
+            <span class="MenuButton_Title">MENU</span>
+            <div class="MenuBar_buttonVeil"></div>
+          </div>
+          <div class="MenuBar_searchButton">
+            <i class="fas fa-search"></i>
+          </div>
+        </div>
+        <div class="MenuBar_Logo">
+          <a
+            href="../index.html"
+            target="_blank"
+            style="transform: translateY(0)"
+            class="MenuBar_logoImg"
+          ></a>
+        </div>
+        <div class="MenuBar_PlusMenu">
+          <div class="MenuBar_PlusMenuButton">
+            <i class="fas fa-plus"></i>
+            <span>PLUS</span>
+          </div>
+          <div class="MenuBar_PlusLogo">
+            <img src="../assets/image/menu-plus.png" alt="" />
+          </div>
+          <div class="PlusButton_buttonVeil"></div>
+        </div>
+      </div>
+      <div class="Main">
+        <div class="ListHeaderBlock">
+          <div class="ListHeaderBlock_watermark">HANDS</div>
+          <div class="ListHeaderBlock_mainContainer">
+            <div class="ListHeaderBlock_content">
+              <h1 class="ListHeaderBlock_title">HANDS</h1>
+              <p class="ListHeaderBlock_description">
+                Chez Ubisoft, les expertises métiers et les collaborateurs sont
+                au centre de tout. Découvrez les savoir-faire qui rendent au
+                quotidien l’aventure possible !
+              </p>
+            </div>
+            <div class="ListHeaderBlock_more">
+              <div class="LabelledArrow LabelledArrow-noTitle">
+                <div class="LabelledArrow_title LabelledArrow_title-black">
+                  More
+                </div>
+                <div class="Arrow Arrow-black">
+                  <div class="Arrow_primaryLine"></div>
+                  <div
+                    class="Arrow_secondaryLine Arrow_secondaryLine-upperLine"
+                  ></div>
+                  <div
+                    class="Arrow_secondaryLine Arrow_secondaryLine-lowerLine"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="SplittedPreviewBlock SplittedPreviewBlock-interview">
+            <div class="SplittedPreviewBlock_mainContainer">
+              <div class="SplittedPreviewBlock_watermark">Rencontre</div>
+              <div class="SplittedPreviewBlock_previewContainer">
+                <div class="SplittedPreviewBlock_arrowCounter">
+                  <a style="width: 20%;" href="" class="SplittedPreviewBlock_articleLink">
+                    <div class="Arrow Arrow-white">
+                      <div class="Arrow_primaryLine"></div>
+                      <div class="Arrow_secondaryLine Arrow_secondaryLine-upperLine"></div>
+                      <div class="Arrow_secondaryLine Arrow_secondaryLine-lowerLine"></div>
+                    </div>
+                  </a>
+                  <div class="TimeCounter TimeCounter-verticalFat">
+                    <div class="TimeCounter_duration">04</div>
+                    <div class="TimeCounter_unit">minutes</div>
+                  </div>
+                </div>
+                <div class="SplittedPreviewBlock_previewContent">
+                  <a href="" class="SplittedPreviewBlock_formatLink">
+                    Rencontre
+                    <div class="FormatLink_contentTypeLine"></div>
+                  </a>
+                  <a href="" class="SplittedPreviewBlock_articleLink">
+                    <div class="SplittedPreviewBlock_title">He works where you play : Line Designer</div>
+                    <div class="SplittedPreviewBlock_description"></div>
+                  </a>
+                  <div class="SplittedPreviewBlock_details">
+                    <div class="RelativeDate RelativeDate-white SplittedPreviewBlock_relativeDate">il y a 2 semaines</div>
+                    <div class="TaxonomyLike">
+                      <div class="TaxonomyButton">BRAIN</div>
+                      <a class="TaxonomyButton TaxomyLikeButton">
+                        <span>12</span>
+                          <i class="fas fa-heart"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="" class="SplittedPreviewBlock_link">
+              <div style="background-image: url('../assets/image/main-menu-4.jpg');" class="SplittedPreviewBlock_image"></div>
+            </a>
+          </div>
+          <div class="SplittedPreviewBlock SplittedPreviewBlock-interview">
+            <div class="SplittedPreviewBlock_mainContainer">
+              <div class="SplittedPreviewBlock_watermark">Rencontre</div>
+              <div class="SplittedPreviewBlock_previewContainer">
+                <div class="SplittedPreviewBlock_arrowCounter">
+                  <a style="width: 20%;" href="" class="SplittedPreviewBlock_articleLink">
+                    <div class="Arrow Arrow-white">
+                      <div class="Arrow_primaryLine"></div>
+                      <div class="Arrow_secondaryLine Arrow_secondaryLine-upperLine"></div>
+                      <div class="Arrow_secondaryLine Arrow_secondaryLine-lowerLine"></div>
+                    </div>
+                  </a>
+                  <div class="TimeCounter TimeCounter-verticalFat">
+                    <div class="TimeCounter_duration">04</div>
+                    <div class="TimeCounter_unit">minutes</div>
+                  </div>
+                </div>
+                <div class="SplittedPreviewBlock_previewContent">
+                  <a href="" class="SplittedPreviewBlock_formatLink">
+                    Rencontre
+                    <div class="FormatLink_contentTypeLine"></div>
+                  </a>
+                  <a href="" class="SplittedPreviewBlock_articleLink">
+                    <div class="SplittedPreviewBlock_title">Ubisoft x Glénat</div>
+                    <div class="SplittedPreviewBlock_description"></div>
+                  </a>
+                  <div class="SplittedPreviewBlock_details">
+                    <div class="RelativeDate RelativeDate-white SplittedPreviewBlock_relativeDate">il y a 2 semaines</div>
+                    <div class="TaxonomyLike">
+                      <div class="TaxonomyButton">BRAIN</div>
+                      <a class="TaxonomyButton TaxomyLikeButton">
+                        <span>102</span>
+                          <i class="fas fa-heart"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="" class="SplittedPreviewBlock_link">
+              <div style="background-image: url('../assets/image/main-menu-6.jpg');" class="SplittedPreviewBlock_image"></div>
+            </a>
+          </div>
+          <div class="SplittedPreviewBlock SplittedPreviewBlock-interview">
+            <div class="SplittedPreviewBlock_mainContainer">
+              <div class="SplittedPreviewBlock_watermark">Rencontre</div>
+              <div class="SplittedPreviewBlock_previewContainer">
+                <div class="SplittedPreviewBlock_arrowCounter">
+                  <a style="width: 20%;" href="" class="SplittedPreviewBlock_articleLink">
+                    <div class="Arrow Arrow-white">
+                      <div class="Arrow_primaryLine"></div>
+                      <div class="Arrow_secondaryLine Arrow_secondaryLine-upperLine"></div>
+                      <div class="Arrow_secondaryLine Arrow_secondaryLine-lowerLine"></div>
+                    </div>
+                  </a>
+                  <div class="TimeCounter TimeCounter-verticalFat">
+                    <div class="TimeCounter_duration">04</div>
+                    <div class="TimeCounter_unit">minutes</div>
+                  </div>
+                </div>
+                <div class="SplittedPreviewBlock_previewContent">
+                  <a href="" class="SplittedPreviewBlock_formatLink">
+                    Rencontre
+                    <div class="FormatLink_contentTypeLine"></div>
+                  </a>
+                  <a href="" class="SplittedPreviewBlock_articleLink">
+                    <div class="SplittedPreviewBlock_title">Marie-Valentine, Sound Designer</div>
+                    <div class="SplittedPreviewBlock_description"></div>
+                  </a>
+                  <div class="SplittedPreviewBlock_details">
+                    <div class="RelativeDate RelativeDate-white SplittedPreviewBlock_relativeDate">il y a 2 semaines</div>
+                    <div class="TaxonomyLike">
+                      <div class="TaxonomyButton">BRAIN</div>
+                      <a class="TaxonomyButton TaxomyLikeButton">
+                        <span>102</span>
+                          <i class="fas fa-heart"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="" class="SplittedPreviewBlock_link">
+              <div style="background-image: url('../assets/image/main-menu-9.jpg');" class="SplittedPreviewBlock_image"></div>
+            </a>
+          </div>
+          <div class="SplittedPreviewBlock SplittedPreviewBlock-interview">
+            <div class="SplittedPreviewBlock_mainContainer">
+              <div class="SplittedPreviewBlock_watermark">Rencontre</div>
+              <div class="SplittedPreviewBlock_previewContainer">
+                <div class="SplittedPreviewBlock_arrowCounter">
+                  <a style="width: 20%;" href="" class="SplittedPreviewBlock_articleLink">
+                    <div class="Arrow Arrow-white">
+                      <div class="Arrow_primaryLine"></div>
+                      <div class="Arrow_secondaryLine Arrow_secondaryLine-upperLine"></div>
+                      <div class="Arrow_secondaryLine Arrow_secondaryLine-lowerLine"></div>
+                    </div>
+                  </a>
+                  <div class="TimeCounter TimeCounter-verticalFat">
+                    <div class="TimeCounter_duration">04</div>
+                    <div class="TimeCounter_unit">minutes</div>
+                  </div>
+                </div>
+                <div class="SplittedPreviewBlock_previewContent">
+                  <a href="" class="SplittedPreviewBlock_formatLink">
+                    Rencontre
+                    <div class="FormatLink_contentTypeLine"></div>
+                  </a>
+                  <a href="" class="SplittedPreviewBlock_articleLink">
+                    <div class="SplittedPreviewBlock_title">« J’ai fait de ma différence une force »</div>
+                    <div class="SplittedPreviewBlock_description"></div>
+                  </a>
+                  <div class="SplittedPreviewBlock_details">
+                    <div class="RelativeDate RelativeDate-white SplittedPreviewBlock_relativeDate">il y a 2 semaines</div>
+                    <div class="TaxonomyLike">
+                      <div class="TaxonomyButton">BRAIN</div>
+                      <a class="TaxonomyButton TaxomyLikeButton">
+                        <span>102</span>
+                          <i class="fas fa-heart"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="" class="SplittedPreviewBlock_link">
+              <div style="background-image: url('../assets/image/SplittedPreviewBlock_img3.jpg');" class="SplittedPreviewBlock_image"></div>
+            </a>
+          </div>
+          <div class="SplittedPreviewBlock SplittedPreviewBlock-interview">
+            <div class="SplittedPreviewBlock_mainContainer">
+              <div class="SplittedPreviewBlock_watermark">Rencontre</div>
+              <div class="SplittedPreviewBlock_previewContainer">
+                <div class="SplittedPreviewBlock_arrowCounter">
+                  <a style="width: 20%;" href="" class="SplittedPreviewBlock_articleLink">
+                    <div class="Arrow Arrow-white">
+                      <div class="Arrow_primaryLine"></div>
+                      <div class="Arrow_secondaryLine Arrow_secondaryLine-upperLine"></div>
+                      <div class="Arrow_secondaryLine Arrow_secondaryLine-lowerLine"></div>
+                    </div>
+                  </a>
+                  <div class="TimeCounter TimeCounter-verticalFat">
+                    <div class="TimeCounter_duration">04</div>
+                    <div class="TimeCounter_unit">minutes</div>
+                  </div>
+                </div>
+                <div class="SplittedPreviewBlock_previewContent">
+                  <a href="" class="SplittedPreviewBlock_formatLink">
+                    Rencontre
+                    <div class="FormatLink_contentTypeLine"></div>
+                  </a>
+                  <a href="" class="SplittedPreviewBlock_articleLink">
+                    <div class="SplittedPreviewBlock_title">« Le mobile m’a fait découvrir le monde »</div>
+                    <div class="SplittedPreviewBlock_description"></div>
+                  </a>
+                  <div class="SplittedPreviewBlock_details">
+                    <div class="RelativeDate RelativeDate-white SplittedPreviewBlock_relativeDate">il y a 2 semaines</div>
+                    <div class="TaxonomyLike">
+                      <div class="TaxonomyButton">BRAIN</div>
+                      <a class="TaxonomyButton TaxomyLikeButton">
+                        <span>102</span>
+                          <i class="fas fa-heart"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="" class="SplittedPreviewBlock_link">
+              <div style="background-image: url('../assets/image/SplittedPreviewBlock_img4.jpg')" class="SplittedPreviewBlock_image"></div>
+            </a>
+          </div>
+          <div class="GridBlock">
+            <div class="GridBlock_mainContainer">
+              <div class="GridBlock_postContainer">
+                <div class="PostPreview">
+                  <a class="PostPreview_articleLink" href="">
+                    <div class="PostPreview_imageContainer">
+                      <img src="../assets/image/post-square4.jpg" alt="" />
+                      <div class="PostImage_border"></div>
+                    </div>
+                    <div class="TimeCounter">
+                      <div class="TimeCounter_duration">01</div>
+                      <div class="TimeCounter_unit">minutes</div>
+                    </div>
+                  </a>
+                  <div class="PostPreview_description">
+                    <a class="PostPreview_formatLink" href="">
+                      Behind the scene
+                      <div class="FormatLink_contentTypeLine"></div>
+                    </a>
+                    <a href="" class="PostPreview_title">
+                      les adros et les jeux de romance
+                    </a>
+                  </div>
+                  <div class="PostPreview_details">
+                    <div class="RelativeDate">il y a 4 semaines</div>
+                    <div class="TaxonomyLike">
+                      <a class="TaxonomyButton" href="">HEART</a>
+                      <a class="TaxonomyButton TaxomyLikeButton" href="">
+                        <span>102</span>
+                        <i class="fas fa-heart"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="GridBlock_postContainer">
+                <div class="PostPreview">
+                  <a class="PostPreview_articleLink" href="">
+                    <div class="PostPreview_imageContainer">
+                      <img src="../assets/image/post-square5.jpg" alt="" />
+                      <div class="PostImage_border"></div>
+                    </div>
+                    <div class="TimeCounter">
+                      <div class="TimeCounter_duration">01</div>
+                      <div class="TimeCounter_unit">minutes</div>
+                    </div>
+                  </a>
+                  <div class="PostPreview_description">
+                    <a class="PostPreview_formatLink" href="">
+                      Behind the scene
+                      <div class="FormatLink_contentTypeLine"></div>
+                    </a>
+                    <a href="" class="PostPreview_title">
+                      les adros et les jeux de romance
+                    </a>
+                  </div>
+                  <div class="PostPreview_details">
+                    <div class="RelativeDate">il y a 4 semaines</div>
+                    <div class="TaxonomyLike">
+                      <a class="TaxonomyButton" href="">HEART</a>
+                      <a class="TaxonomyButton TaxomyLikeButton" href="">
+                        <span>102</span>
+                        <i class="fas fa-heart"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="GridBlock_postContainer">
+                <div class="PostPreview">
+                  <a class="PostPreview_articleLink" href="">
+                    <div class="PostPreview_imageContainer">
+                      <img src="../assets/image/post-square6.jpg" alt="" />
+                      <div class="PostImage_border"></div>
+                    </div>
+                    <div class="TimeCounter">
+                      <div class="TimeCounter_duration">01</div>
+                      <div class="TimeCounter_unit">minutes</div>
+                    </div>
+                  </a>
+                  <div class="PostPreview_description">
+                    <a class="PostPreview_formatLink" href="">
+                      Behind the scene
+                      <div class="FormatLink_contentTypeLine"></div>
+                    </a>
+                    <a href="" class="PostPreview_title">
+                      les adros et les jeux de romance
+                    </a>
+                  </div>
+                  <div class="PostPreview_details">
+                    <div class="RelativeDate">il y a 4 semaines</div>
+                    <div class="TaxonomyLike">
+                      <a class="TaxonomyButton" href="">HEART</a>
+                      <a class="TaxonomyButton TaxomyLikeButton" href="">
+                        <span>102</span>
+                        <i class="fas fa-heart"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="GridBlock_postContainer">
+                <div class="PostPreview">
+                  <a class="PostPreview_articleLink" href="">
+                    <div class="PostPreview_imageContainer">
+                      <img src="../assets/image/post-square7.jpg" alt="" />
+                      <div class="PostImage_border"></div>
+                    </div>
+                    <div class="TimeCounter">
+                      <div class="TimeCounter_duration">01</div>
+                      <div class="TimeCounter_unit">minutes</div>
+                    </div>
+                  </a>
+                  <div class="PostPreview_description">
+                    <a class="PostPreview_formatLink" href="">
+                      Behind the scene
+                      <div class="FormatLink_contentTypeLine"></div>
+                    </a>
+                    <a href="" class="PostPreview_title">
+                      les adros et les jeux de romance
+                    </a>
+                  </div>
+                  <div class="PostPreview_details">
+                    <div class="RelativeDate">il y a 4 semaines</div>
+                    <div class="TaxonomyLike">
+                      <a class="TaxonomyButton" href="">HEART</a>
+                      <a class="TaxonomyButton TaxomyLikeButton" href="">
+                        <span>102</span>
+                        <i class="fas fa-heart"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="GridBlock_postContainer">
+                <div class="PostPreview">
+                  <a class="PostPreview_articleLink" href="">
+                    <div class="PostPreview_imageContainer">
+                      <img src="../assets/image/post-square8.jpg" alt="" />
+                      <div class="PostImage_border"></div>
+                    </div>
+                    <div class="TimeCounter">
+                      <div class="TimeCounter_duration">01</div>
+                      <div class="TimeCounter_unit">minutes</div>
+                    </div>
+                  </a>
+                  <div class="PostPreview_description">
+                    <a class="PostPreview_formatLink" href="">
+                      Behind the scene
+                      <div class="FormatLink_contentTypeLine"></div>
+                    </a>
+                    <a href="" class="PostPreview_title">
+                      les adros et les jeux de romance
+                    </a>
+                  </div>
+                  <div class="PostPreview_details">
+                    <div class="RelativeDate">il y a 4 semaines</div>
+                    <div class="TaxonomyLike">
+                      <a class="TaxonomyButton" href="">HEART</a>
+                      <a class="TaxonomyButton TaxomyLikeButton" href="">
+                        <span>102</span>
+                        <i class="fas fa-heart"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="GridBlock_postContainer">
+                <div class="PostPreview PostPreview-void">
+                  <div class="PostPreview_imageContainer"></div>
+                  <div class="PostPreview_description">
+                    <div class="PostPreview_contentType"></div>
+                    <div class="PostPreview_title"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <footer class="Footer">
+        <div class="Footer_footerContent">
+          <div class="Footer_primaryContainer">
+            <a href="" class="Footer_logoUbisoft"></a>
+            <div class="Footer_separator"></div>
+            <div class="Footer_socialLinks">
+              <a
+                href=""
+                class="Footer_socialLink Footer_socialLink-facebook"
+              ></a>
+              <a
+                href=""
+                class="Footer_socialLink Footer_socialLink-twitter"
+              ></a>
+              <a
+                href=""
+                class="Footer_socialLink Footer_socialLink-instagram"
+              ></a>
+              <a
+                href=""
+                class="Footer_socialLink Footer_socialLink-linkedin"
+              ></a>
+              <a
+                href=""
+                class="Footer_socialLink Footer_socialLink-youtube"
+              ></a>
+            </div>
+          </div>
+          <div class="Footer_secondaryContainer">
+            <a href="" class="Footer_navLinks">Ubisoft.com</a
+            ><a href="" class="Footer_navLinks">A propos d'Ubisoft</a
+            ><a href="" class="Footer_navLinks">Rejoindre Ubisoft</a
+            ><a href="" class="Footer_navLinks">Crédits et contacts</a
+            ><a href="" class="Footer_navLinks"
+              >Mentions légales, conditions et confidentialité</a
+            >
+          </div>
+        </div>
+        <div class="Footer_copyrightBar">
+          <p class="Footer_copyrightText">
+            ©2021 UBISOFT ENTERTAINMENT. ALL RIGHTS RESERVED. UBISOFT, AND THE
+            UBISOFT LOGO ARE TRADEMARKS OF UBISOFT ENTERTAINMENT IN THE US
+            AND/OR OTHER COUNTRIES.
+          </p>
+        </div>
+      </footer>
+      <div id="mainmenu" class="MainMenu">
+        <div class="MainMenu_mainContainer">
+          <div class="MainMenu_topContainer">
+            <ul class="MainMenu_primaryMenuContainer">
+              <li class="MainMenu_primaryMenuItem">
+                <a class="MainMenu_primaryMenuLink Brain" href="../Pages/brain.html">BRAIN</a>
+              </li>
+              <li class="MainMenu_primaryMenuItem">
+                <a class="MainMenu_primaryMenuLink Hand active" href="../Pages/hand.html">HANDS</a>
+              </li>
+              <li class="MainMenu_primaryMenuItem">
+                <a class="MainMenu_primaryMenuLink Heart " href="../Pages/heart.html">HEARTS</a>
+              </li>
+              <li class="MainMenu_primaryMenuItem">
+                <a class="MainMenu_primaryMenuLink Thumps" href="../Pages/thumps.html">THUMPS UP</a>
+              </li>
+            </ul>
+            <div class="MainMenu_imageMenuContainer">
+              <div class="MainMenu_imageMenuCase MainMenu_imageMenuCase-1">
+                <div class="MainMenu_imageMenuInnerCase">
+                  <a href="" class="MainMenu_imageMenuLink">
+                    <div style="background-image: url(../assets/image/post-square3.jpg);" class="MainMenu_imageMenuBackground"></div>
+                    <div class="TimeCounter MaimenuTimeCouter">
+                      <div class="TimeCounter_duration">04</div>
+                      <div class="TimeCounter_unit">minutes</div>
+                    </div>
+                    <div class="MainMenu_imageMenuTitleContainer">
+                      <h2 class="MainMenu_imageMenuTitle">He works where you play : Lead Audio</h2>
+                    </div>
+                  </a>
+                  <a href="" class="MainMenu_imageMenuLink">
+                    <div style="background-image: url(../assets/image/main-menu-2.jpg);" class="MainMenu_imageMenuBackground"></div>
+                    <div class="TimeCounter MaimenuTimeCouter">
+                      <div class="TimeCounter_duration">04</div>
+                      <div class="TimeCounter_unit">minutes</div>
+                    </div>
+                    <div class="MainMenu_imageMenuTitleContainer">
+                      <h2 class="MainMenu_imageMenuTitle">He works where you play : Lead Audio</h2>
+                    </div>
+                  </a>
+                  <a href="" class="MainMenu_imageMenuLink">
+                    <div style="background-image: url(../assets/image/main-menu-3.jpg);" class="MainMenu_imageMenuBackground"></div>
+                    <div class="TimeCounter MaimenuTimeCouter">
+                      <div class="TimeCounter_duration">04</div>
+                      <div class="TimeCounter_unit">minutes</div>
+                    </div>
+                    <div class="MainMenu_imageMenuTitleContainer">
+                      <h2 class="MainMenu_imageMenuTitle">He works where you play : Lead Audio</h2>
+                    </div>
+                  </a>
+                  <a href="" class="MainMenu_imageMenuLink">
+                    <div style="background-image: url(../assets/image/slide3.jpg);" class="MainMenu_imageMenuBackground"></div>
+                    <div class="TimeCounter MaimenuTimeCouter">
+                      <div class="TimeCounter_duration">04</div>
+                      <div class="TimeCounter_unit">minutes</div>
+                    </div>
+                    <div class="MainMenu_imageMenuTitleContainer">
+                      <h2 class="MainMenu_imageMenuTitle">He works where you play : Lead Audio</h2>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="MainMenu_imageMenuCase MainMenu_imageMenuCase-2">
+                <div class="MainMenu_imageMenuInnerCase">
+                  <a href="" class="MainMenu_imageMenuLink">
+                    <div style="background-image: url(../assets/image/post-square1.jpg);" class="MainMenu_imageMenuBackground"></div>
+                    <div class="TimeCounter MaimenuTimeCouter">
+                      <div class="TimeCounter_duration">04</div>
+                      <div class="TimeCounter_unit">minutes</div>
+                    </div>
+                    <div class="MainMenu_imageMenuTitleContainer">
+                      <h2 class="MainMenu_imageMenuTitle">He works where you play : Lead Audio</h2>
+                    </div>
+                  </a>
+                  <a href="" class="MainMenu_imageMenuLink">
+                    <div style="background-image: url(../assets/image/main-menu-4.jpg);" class="MainMenu_imageMenuBackground"></div>
+                    <div class="TimeCounter MaimenuTimeCouter">
+                      <div class="TimeCounter_duration">04</div>
+                      <div class="TimeCounter_unit">minutes</div>
+                    </div>
+                    <div class="MainMenu_imageMenuTitleContainer">
+                      <h2 class="MainMenu_imageMenuTitle">He works where you play : Lead Audio</h2>
+                    </div>
+                  </a>
+                  <a href="" class="MainMenu_imageMenuLink">
+                    <div style="background-image: url(../assets/image/main-menu-12.jpg);" class="MainMenu_imageMenuBackground"></div>
+                    <div class="TimeCounter MaimenuTimeCouter">
+                      <div class="TimeCounter_duration">04</div>
+                      <div class="TimeCounter_unit">minutes</div>
+                    </div>
+                    <div class="MainMenu_imageMenuTitleContainer">
+                      <h2 class="MainMenu_imageMenuTitle">He works where you play : Lead Audio</h2>
+                    </div>
+                  </a>
+                  <a href="" class="MainMenu_imageMenuLink">
+                    <div style="background-image: url(../assets/image/main-menu-5.jpg);" class="MainMenu_imageMenuBackground"></div>
+                    <div class="TimeCounter MaimenuTimeCouter">
+                      <div class="TimeCounter_duration">04</div>
+                      <div class="TimeCounter_unit">minutes</div>
+                    </div>
+                    <div class="MainMenu_imageMenuTitleContainer">
+                      <h2 class="MainMenu_imageMenuTitle">He works where you play : Lead Audio</h2>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="MainMenu_imageMenuCase MainMenu_imageMenuCase-3">
+                <div class="MainMenu_imageMenuInnerCase">
+                  <a href="" class="MainMenu_imageMenuLink">
+                    <div style="background-image: url(../assets/image/post-square2.jpg);" class="MainMenu_imageMenuBackground"></div>
+                    <div class="TimeCounter MaimenuTimeCouter">
+                      <div class="TimeCounter_duration">04</div>
+                      <div class="TimeCounter_unit">minutes</div>
+                    </div>
+                    <div class="MainMenu_imageMenuTitleContainer">
+                      <h2 class="MainMenu_imageMenuTitle">He works where you play : Lead Audio</h2>
+                    </div>
+                  </a>
+                  <a href="" class="MainMenu_imageMenuLink">
+                    <div style="background-image: url(../assets/image/main-menu-6.jpg);" class="MainMenu_imageMenuBackground"></div>
+                    <div class="TimeCounter MaimenuTimeCouter">
+                      <div class="TimeCounter_duration">04</div>
+                      <div class="TimeCounter_unit">minutes</div>
+                    </div>
+                    <div class="MainMenu_imageMenuTitleContainer">
+                      <h2 class="MainMenu_imageMenuTitle">He works where you play : Lead Audio</h2>
+                    </div>
+                  </a>
+                  <a href="" class="MainMenu_imageMenuLink">
+                    <div style="background-image: url(../assets/image/main-menu-7.jpg);" class="MainMenu_imageMenuBackground"></div>
+                    <div class="TimeCounter MaimenuTimeCouter">
+                      <div class="TimeCounter_duration">04</div>
+                      <div class="TimeCounter_unit">minutes</div>
+                    </div>
+                    <div class="MainMenu_imageMenuTitleContainer">
+                      <h2 class="MainMenu_imageMenuTitle">He works where you play : Lead Audio</h2>
+                    </div>
+                  </a>
+                  <a href="" class="MainMenu_imageMenuLink">
+                    <div style="background-image: url(../assets/image/slide5.jpg);" class="MainMenu_imageMenuBackground"></div>
+                    <div class="TimeCounter MaimenuTimeCouter">
+                      <div class="TimeCounter_duration">04</div>
+                      <div class="TimeCounter_unit">minutes</div>
+                    </div>
+                    <div class="MainMenu_imageMenuTitleContainer">
+                      <h2 class="MainMenu_imageMenuTitle">He works where you play : Lead Audio</h2>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="MainMenu_imageMenuCase MainMenu_imageMenuCase-4">
+                <div class="MainMenu_imageMenuInnerCase">
+                  <a href="" class="MainMenu_imageMenuLink">
+                    <div style="background-image: url(../assets/image/main-menu-8.jpg);" class="MainMenu_imageMenuBackground"></div>
+                    <div class="TimeCounter MaimenuTimeCouter">
+                      <div class="TimeCounter_duration">04</div>
+                      <div class="TimeCounter_unit">minutes</div>
+                    </div>
+                    <div class="MainMenu_imageMenuTitleContainer">
+                      <h2 class="MainMenu_imageMenuTitle">He works where you play : Lead Audio</h2>
+                    </div>
+                  </a>
+                  <a href="" class="MainMenu_imageMenuLink">
+                    <div style="background-image: url(../assets/image/main-menu-9.jpg);" class="MainMenu_imageMenuBackground"></div>
+                    <div class="TimeCounter MaimenuTimeCouter">
+                      <div class="TimeCounter_duration">04</div>
+                      <div class="TimeCounter_unit">minutes</div>
+                    </div>
+                    <div class="MainMenu_imageMenuTitleContainer">
+                      <h2 class="MainMenu_imageMenuTitle">He works where you play : Lead Audio</h2>
+                    </div>
+                  </a>
+                  <a href="" class="MainMenu_imageMenuLink">
+                    <div style="background-image: url(../assets/image/main-menu-10.jpg);" class="MainMenu_imageMenuBackground"></div>
+                    <div class="TimeCounter MaimenuTimeCouter">
+                      <div class="TimeCounter_duration">04</div>
+                      <div class="TimeCounter_unit">minutes</div>
+                    </div>
+                    <div class="MainMenu_imageMenuTitleContainer">
+                      <h2 class="MainMenu_imageMenuTitle">He works where you play : Lead Audio</h2>
+                    </div>
+                  </a>
+                  <a href="" class="MainMenu_imageMenuLink">
+                    <div style="background-image: url(../assets/image/main-menu-11.jpg);" class="MainMenu_imageMenuBackground"></div>
+                    <div class="TimeCounter MaimenuTimeCouter">
+                      <div class="TimeCounter_duration">04</div>
+                      <div class="TimeCounter_unit">minutes</div>
+                    </div>
+                    <div class="MainMenu_imageMenuTitleContainer">
+                      <h2 class="MainMenu_imageMenuTitle">He works where you play : Lead Audio</h2>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="MainMenu_bottomContainer">
+            <ul class="MainMenu_secondaryMenuContainer">
+              <li class="MainMenu_secondaryMenuItem"><a class="MainMenu_secondaryMenuLink" href="">video</a></li>
+              <li class="MainMenu_secondaryMenuItem"><a class="MainMenu_secondaryMenuLink" href="">Reportage</a></li>
+              <li class="MainMenu_secondaryMenuItem"><a class="MainMenu_secondaryMenuLink" href="">Behind the scene</a></li>
+            </ul>
+            <ul class="MainMenu_tertiaryMenuContainer">
+              <li class="MainMenu_tertiaryMenuItem">
+                <a href="" class="MainMenu_tertiaryMenuLink">CHRONIQUE</a>
+              </li>
+              <li class="MainMenu_tertiaryMenuItem">
+                <a href="" class="MainMenu_tertiaryMenuLink">DATA!</a>
+              </li>
+              <li class="MainMenu_tertiaryMenuItem">
+                <a href="" class="MainMenu_tertiaryMenuLink">RECONTRE</a>
+              </li>
+              <li class="MainMenu_tertiaryMenuItem">
+                <a href="" class="MainMenu_tertiaryMenuLink">DESK ANATOMY</a>
+              </li>
+              <li class="MainMenu_tertiaryMenuItem">
+                <a href="" class="MainMenu_tertiaryMenuLink">INTRA MUROS</a>
+              </li>
+              <li class="MainMenu_tertiaryMenuItem">
+                <a href="" class="MainMenu_tertiaryMenuLink">SLIDE SHOW</a>
+              </li>
+            </ul>
+            <div class="MainMenu_shareContainer">
+              <p class="MainMenu_shareTitle">Partager stories.fr</p>
+              <div class="ShareBar">
+                <div class="ShareBar_socialContainer">
+                  <div class="ShareBar_socialLinkWrapper">
+                    <div class="FacebookLogo ShareBar_socialLink">
+                      <i class="fab fa-facebook-f"></i>
+                    </div>
+                    <div class="FacebookLogo ShareBar_socialLink">
+                      <i class="fab fa-facebook-f"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="ShareBar_socialContainer">
+                  <div class="ShareBar_socialLinkWrapper">
+                    <div class="TwitterLogo ShareBar_socialLink">
+                      <i class="fab fa-twitter"></i>
+                    </div>
+                    <div class="TwitterLogo ShareBar_socialLink">
+                      <i class="fab fa-twitter"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="ShareBar_socialContainer">
+                  <div class="ShareBar_socialLinkWrapper">
+                    <div class="LinkedinLogo ShareBar_socialLink">
+                      <i class="fab fa-linkedin-in"></i>
+                    </div>
+                    <div class="LinkedinLogo ShareBar_socialLink">
+                      <i class="fab fa-linkedin-in"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="ShareBar_socialContainer">
+                  <div class="ShareBar_socialLinkWrapper">
+                    <div class="EmailLogo ShareBar_socialLink">
+                      <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="EmailLogo ShareBar_socialLink">
+                      <i class="fas fa-envelope"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../assets/script/main.js"></script>
+  </body>
+</html>
