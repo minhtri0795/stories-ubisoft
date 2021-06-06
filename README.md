@@ -13,7 +13,7 @@ Scroll to top.
 
 ## File Structure
 stories-ubisoft
-
+```
 ├── index.html
 ├── readme.md
 ├── Pages
@@ -24,7 +24,7 @@ stories-ubisoft
 │      ├── css
 │      ├── image
 │      └── script
-
+```
 ## Browser Support
 Chrome, 
 Firefox, 
