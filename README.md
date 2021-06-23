@@ -22,8 +22,10 @@ stories-ubisoft
 │      └── heart.html 
 ├── assets
 │      ├── css
+│      ├── scss
 │      ├── image
-│      └── script
+|      ├── font
+|      ├── script
 ```
 ## Browser Support
 Chrome, 
