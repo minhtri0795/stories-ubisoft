@@ -2,6 +2,8 @@
 
 This is project end of term front-end basic. Template clone base on website stories.ubisoft.com, which colorful web with Illustration style and big bold text.
 
+## Screenshot
+
 ## Feature
 Illustration UI.
 
@@ -19,11 +21,14 @@ stories-ubisoft
 ├── Pages
 │      ├── brain.html
 │      ├── hand.html
-│      └── heart.html 
+│      ├── heart.html 
+|      ├── thumpsup.html
 ├── assets
 │      ├── css
+│      ├── scss
 │      ├── image
-│      └── script
+|      ├── font
+|      ├── script
 ```
 ## Browser Support
 Chrome, 
