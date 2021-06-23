@@ -1,0 +1,137 @@
+.Footer {
+	background: $black;
+}
+.Footer_footerContent {
+	padding: 2% 0;
+}
+.Footer_primaryContainer {
+	display: flex;
+	margin-bottom: 2%;
+	flex-direction: row;
+	align-items: stretch;
+	justify-content: center;
+}
+.Footer_logoUbisoft {
+	margin-left: 40px;
+	margin-right: 30px;
+	background: {
+		image: url("../image/sample-background.png");
+		position: -585px -441.5px;
+		size: 842px 700px;
+		repeat: no-repeat;
+	}
+	width: 182px;
+	height: 60px;
+}
+.Footer_separator {
+	width: 1px;
+	background: $white;
+}
+.Footer_socialLinks {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.Footer_socialLink {
+	margin: 0 0 0 30px;
+	position: relative;
+}
+.Footer_socialLink-facebook {
+	background: {
+		image: url("../image/sample-background.png");
+		repeat: no-repeat;
+		position: -817px -393.5px;
+		size: 842px 700px;
+	}
+	width: 12px;
+	height: 24px;
+}
+.Footer_socialLink-twitter {
+	background: {
+		image: url("../image/sample-background.png");
+		repeat: no-repeat;
+		position: -817px -305.5px;
+		size: 842px 700px;
+	};
+	width: 24px;
+	height: 20px;
+}
+.Footer_socialLink-instagram {
+	background: {
+		image: url("../image/sample-background.png");
+		repeat: no-repeat;
+		position: -817px -327.5px;
+		size: 842px 700px;
+	};
+	width: 20px;
+	height: 20px;
+}
+.Footer_socialLink-linkedin {
+	background: {
+		image: url("../image/sample-background.png");
+		position: -817px -371.5px;
+		size: 842px 700px;
+		repeat: no-repeat;
+	}
+	width: 20px;
+	height: 20px;
+}
+.Footer_socialLink-youtube {
+	background: {
+		image: url("../image/sample-background.png");
+		position: -715px -503.5px;
+		size: 842px 700px;
+		repeat: no-repeat;
+	}
+	width: 28px;
+	height: 20px;
+}
+.Footer_secondaryContainer {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: auto;
+	font-size: 17px;
+	margin-left: 13px;
+}
+.Footer_navLinks {
+	position: relative;
+	font-family: $ubisoft-font;
+	color: $grey;
+	margin: 0 24px;
+	font-size: 17px;
+	&::before {
+		content: '';
+		display: block;
+		position: absolute;
+		width: 2px;
+		height: .75em;
+		background-color: currentColor;
+		left: -24px;
+		top: .25em;
+		pointer-events: none;
+	}
+	&:first-child {
+		&::before {
+			display: none;
+		}
+	}
+}
+.Footer_copyrightBar {
+	display: flex;
+	height: auto;
+	padding: 1vw 2vw;
+	font-family: $ubisoft-font;
+	font-size: 13px;
+	text-transform: uppercase;
+	background-color: #212121;
+	color: $grey;
+}
+.Footer_copyrightText {
+	line-height: 18px;
+	max-width: 1023px;
+	margin: auto;
+	text-align: center;
+}

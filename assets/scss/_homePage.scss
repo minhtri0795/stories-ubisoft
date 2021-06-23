@@ -1,0 +1,726 @@
+.AppContainer {
+	overflow: hidden;
+	position: relative;
+}
+.Main {
+	min-height: calc(100vh - 50px);
+}
+
+/*Cover block*/ 
+.CoverBlock {
+	position: relative;
+	top: 50px;
+	height: auto;
+	margin: {
+		top: 0;
+		bottom: 30px;
+	};
+	width: 100%;
+	padding-top: 0;
+	z-index: 0;
+}
+.CoverBlock_Background {
+	position: absolute;
+	min-height: 100vw;
+	top: 0px;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: {
+		image: url('../image/home.jpg');
+		repeat: no-repeat;
+		position: center;
+		size: cover;
+	};
+}
+.CoverBlock_mainContainer {
+	position: relative;
+	margin: auto;
+	width: 87.5vw;
+	padding: 6.25vw 0;
+}
+.CoverBlock_storiesLogo {
+	font-family: $ubisoft-font;
+	position: relative;
+	top: 0;
+	margin: 6.25vw 0;
+	transform: translateY(40px);
+}
+.StoriesLogo_topLine {
+	position: absolute;
+	top: -8px;
+	right: 0;
+	bottom: auto;
+	left: 0;
+	text-align: center;
+	font-size: 20px;
+	line-height: 22px;
+	color: white;
+	text-transform: uppercase;
+}
+.StoriesLogo_bottomLine {
+	position: absolute;
+	top: 73%;
+	left: 59.6%;
+	min-width: 200px;
+	font-size: 20px;
+	line-height: 22px;
+	color: white;
+	text-transform: uppercase;
+}
+.StoriesLogo_stories {
+	position: relative;
+	margin: auto;
+	width: 40.3125vw;
+	height: 18.97873711vw;
+	background: {
+		image: url("../image/sample-background.png");
+		size: 58.32152062vw 48.48582474vw;
+		position: -0.06926546vw -19.18653351vw;
+		repeat: no-repeat;
+	};
+}
+.CoverBlock_posts {
+	width: 100%;
+}
+.CoverBlock_post {
+	margin-bottom: 3.4375em;
+	&:hover {
+		.CoverBlock_titleLine {
+			width: 150px;
+		}
+	}
+}
+@mixin formatLink($color) {
+	position: relative;
+	font-family: $ubisoft-font;
+	font-size: 20px;
+	color: $color;
+	font-weight: 400;
+	width: fit-content;
+	cursor: pointer;
+	text-transform: uppercase;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+.CoverBlock_formatLink {
+	@include formatLink($cayan);
+	padding: 0.0625em 0.3125em;
+	background: $black;
+}
+.CoverBlock_postTitle {
+	font-family: $comopact-font;
+	font-size: 62px;
+	color: white;
+	text-transform: uppercase;
+	width: 37.5vw;
+	text-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+	margin-top: 0.375em;
+}
+.CoverBlock_titleLine {
+	height: 2px;
+	width: 0;
+	background-color: $cayan;
+	transition: width 0.3s ease;
+}
+.CoverBlock_more {
+	display: block;
+	width: 14rem;
+	position: fixed;
+	right: 6.25vw;
+	bottom: 6.25vw;
+	cursor: pointer;
+	transform-origin: top right;
+	transform: rotate(90deg);
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+.LabelledArrow {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	height: 1vw;
+	&:hover {
+		.Arrow {
+			height: 45px;
+			width: 30%;
+		}
+	}
+}
+.LabelledArrow_title {
+	font-family: $ubisoft-font;
+	text-transform: uppercase;
+	margin-right: 20px;
+	flex-grow: 0;
+	color: white;
+	font-size: 19px;
+}
+
+.Arrow {
+	height: 35px;
+	width: 20%;
+	position: relative;
+	transition: 0.4s ease-out;
+}
+.Arrow-green {
+	color: $cayan;
+}
+.Arrow_primaryLine {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background-color: currentColor;
+}
+.Arrow_secondaryLine-upperLine {
+	position: absolute;
+	top: 0;
+	right: 0;
+	transform-origin: bottom;
+	transform: rotate(-45deg);
+}
+.Arrow_secondaryLine {
+	position: absolute;
+	height: 50%;
+	width: 1px;
+	background-color: currentColor;
+}
+.Arrow_secondaryLine-lowerLine {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	transform: rotate(45deg);
+	transform-origin: top;
+}
+
+/*Folder Preview Block*/ 
+.FolderPreviewBlock {
+	padding: 30px 0;
+	position: relative;
+	width: 100vw;
+	overflow: hidden;
+	&.Small {
+		display: none;
+	}
+	&.Tablet.Mobile {
+		display: none;
+	}
+}
+.FolderPreviewBlock_wrapper {
+	position: relative;
+	width: 100vw;
+	overflow: hidden;
+	&.Small {
+		width: 87.5vw;
+		margin: 0 auto;
+	}
+}
+
+.FolderPreviewBlock_Img {
+	position: absolute;
+	width: 100%;
+	height: auto;
+	transition: transform 0.3s ease-in;
+	transition-delay: 0.1s;
+}
+.FolderPreviewBlock_mainContainer {
+	position: relative;
+	height: 56.25vw;
+	margin: 0 6.25vw;
+}
+.FolderPreviewBlock_previewContainer {
+	display: flex;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 50vw;
+	padding: 6.25vw;
+	background-color: $black;
+	&.Middle {
+		display: block;
+		height: fit-content;
+		margin: 0 auto;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		padding: 60px 20px;
+		background-color: $black;
+		.FolderPreviewBlock_previewBackground {
+			transform-origin: center center;
+		}
+		.FolderPreviewBlock_previewContent {
+			position: relative;
+			width: fit-content;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+		}
+		.FolderPreviewBlock_details {
+			width: 40%;
+		}
+	}
+}
+.FolderPreviewBlock_previewBackground {
+	background-color: $black;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transform: matrix(1, 0, 0, 1, 0, 0);
+	transition: transform 0.3s ease-out;
+}
+.FolderPreviewBlock_previewContent {
+	position: relative;
+	width: 37.5vw;
+	color: $white;
+}
+.FolderPreviewBlock_categoryLink {
+	@include formatLink($cayan);
+	background: $black;
+}
+.FolderPreviewBlock_title {
+	margin: 30px 0;
+	font: 62px $comopact-font;
+	color: $white;
+	text-transform: uppercase;
+}
+.FolderPreviewBlock_description {
+	margin-bottom: 30px;
+	font: 17px $ubisoft-regular-font;
+	color: $white;
+}
+.FolderPreviewBlock_details {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+.RelativeDate {
+	font-family: $ubisoft-regular-font;
+	color: #aaa;
+	font: 14px 600;
+}
+.FolderPreviewBlock_relativeDate {
+	font-family: $ubisoft-regular-font;
+	color: #aaa;
+	font-size: 14px;
+}
+.TaxonomyLike {
+	display: flex;
+}
+.TaxonomyButton {
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	height: 32px;
+	width: auto;
+	padding: 0 14px;
+	color: $black;
+	background-color: $white;
+	cursor: pointer;
+	text-align: left;
+	font: 14px $ubisoft-font;
+	text-transform: uppercase;
+	&.TaxomyLikeButton{
+		color: $pink;
+		margin-left: 5px;
+		font: 12px 600;
+	}
+}
+
+/*Triple Block*/ 
+.TripleBlock {
+	position: relative;
+	width: 100vw;
+	text-align: center;
+	padding: 2.08333333vw 6.25vw;
+	overflow: hidden;
+}
+.TripleBlock.TripleBlockTwo {
+	top: 0;
+}
+.TripleBlock_wrapper {
+	display: block;
+	padding: 2.08333333vw 0;
+}
+.TripleBlock_title {
+	font-family: $comopact-font;
+	font-size: 240px;
+	line-height: 1em;
+	color: #eee;
+	text-transform: uppercase;
+	user-select: none;
+}
+.TripleBlock_mainContainer {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	margin-top: -6.875em;
+}
+.PostPreview {
+	position: relative;
+	width: 25vw;
+	display: block;
+	text-align: left;
+	user-select: none;
+	&:hover {
+		.PostImage_border {
+			transform: scale(1);
+		}
+		.PostPreview_imageContainer {
+			img {
+				transform: scale(1.1);
+			}
+		}
+		.PostPreview_title {
+			background-position: -100%;
+		}
+	}
+}
+.PostPreview_imageContainer {
+	position: relative;
+	overflow: hidden;
+	background-color: rgba(0, 0, 0, 0.05);
+	img {
+		width: 100%;
+		transform: scale(1);
+		transition: 0.2s ease-out;
+	}
+}
+.PostImage_border {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	border: 7px solid $cayan;
+	transform: scale(1.1);
+	transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
+}
+.TimeCounter {
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 0.5625em;
+	background-color: $black;
+	color: $white;
+	width: 50px;
+	height: 50px;
+	padding-top: 0.3125em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+}
+.TimeCounter_duration {
+	font: 30px $comopact-font;
+	line-height: 34px;
+	color: $cayan;
+}
+.TimeCounter_unit {
+	font: 8px $ubisoft-font;
+	line-height: 9px;
+	margin-top: -5px;
+	text-transform: uppercase;
+}
+.PostPreview_formatLink {
+	@include formatLink($violet);
+	margin: 20px 0;
+	&:hover {
+		.FormatLink_contentTypeLine {
+			width: 100%;
+		}
+	}
+}
+.FormatLink_contentTypeLine {
+	position: absolute;
+	bottom: -4px;
+	left: 0;
+	height: 3px;
+	margin-top: 2px;
+	background-color: $violet;
+	width: 0%;
+	transition: 0.3s ease-out;
+}
+.PostPreview_title {
+	font-family: $comopact-font;
+	font-size: 30px;
+	line-height: 34px;
+	text-transform: uppercase;
+	background-image: linear-gradient( to right, $black 50%, $pink 50%, $pink );
+	background-size: 200%;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	transition: 0.2s ease-out;
+}
+.PostPreview_details {
+	height: 65px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/*Slide show block*/ 
+.SlideshowPreviewBlock {
+	padding: 2.08333333vw 0;
+	margin-top: 2.08333333vw;
+	.Slideshow_wrapper {
+		width: 87.5vw;
+		margin: auto;
+	}
+	.Slideshow_innerWrapper {
+		height: 49.21875vw;
+		position: relative;
+		width: 100%;
+		background: $black;
+		overflow: hidden;
+	}
+}
+.SlideshowPreviewBlock_wrapper {
+	padding: 0 6.25vw;
+}
+.SlideshowPreviewBlock_formatLink {
+	@include formatLink($violet);
+	&:hover {
+		.FormatLink_contentTypeLine {
+			width: 100%;
+		}
+	}
+}
+.SlideshowPreviewBlock_title {
+	width: 87.5vw;
+	margin: 0 auto;
+	font-family: $comopact-font;
+	font-size: 62px;
+	text-transform: uppercase;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	color: $black;
+}
+.Slideshow_slide {
+	img {
+		width: 100%;
+	}
+}
+.Slideshow_dots {
+	position: relative;
+	width: 100%;
+	text-align: center;
+	margin-top: 15px;
+	user-select: none;
+}
+.next-zone {
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 50%;
+	height: 100%;
+	&:hover {
+		.next {
+			right: 0;
+		}
+	}
+}
+.prev-zone {
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 50%;
+	height: 100%;
+	left: 0;
+	&:hover {
+		.prev {
+			left: 0;
+		}
+	}
+}
+.control {
+	position: absolute;
+	cursor: pointer;
+	top: 50%;
+	width: fit-content;
+	margin-top: -20px;
+	padding: 16px;
+	color: $cayan;
+	background-color: $black;
+	font-size: 18px;
+	user-select: none;
+	cursor: pointer;
+	height: 55px;
+	width: 80px;
+	display: flex;
+	justify-content: center;
+	justify-content: center;
+	transition: 0.4s ease-out;
+	
+}
+.prev{
+	@extend .control;
+	padding-left: 0px;
+	left: -80px;
+}
+.next{
+	@extend .control;
+	padding-right: 0;
+	right: -80px;
+}
+
+.dot {
+	position: relative;
+	display: inline-block;
+	border: solid 2px #aaa;
+	border-radius: 50%;
+	width: 8px;
+	height: 8px;
+	margin-left: 8px;
+	margin-right: 8px;
+	cursor: pointer;
+	&.active{
+		transform: matrix(1.4, 0, 0, 1.4, 0, 0);
+		border-color: rgb(87, 255, 171);
+		background-color: rgb(87, 255, 171);
+	}
+}
+.fade {
+	animation: fade 0.8s ease-out;
+}
+
+/*Newletter Block*/ 
+.NewsletterBlock {
+	width: 100vw;
+	padding: 2.08333333vw 0;
+}
+.NewsletterBlock_wrapper {
+	background-color: #eee;
+	display: flex;
+	padding: 6.25vw 0;
+}
+.NewsletterBlock_content-first {
+	display: flex;
+	flex-direction: column-reverse;
+	padding-bottom: 12px;
+	width: 50%;
+}
+.NewsletterBlock_imageContainer {
+	position: relative;
+	align-self: flex-end;
+	border-radius: 50%;
+	background-color: $cayan;
+	overflow: hidden;
+	height: 18.75vw;
+	width: 18.75vw;
+	margin-right: 6.25vw;
+}
+.NewsletterBlock_mailbox {
+	background: {
+		image: url("../image/sample-background.png");
+		repeat: no-repeat;
+		size: 41.11328125vw 34.1796875vw;
+		position: -28.56445313vw -.04882812vw;
+	};
+	position: absolute;
+	width: 12.5vw;
+	height: 13.69628906vw;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.NewsletterBlock_mailhandWrapper {
+	position: absolute;
+	bottom: 40%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.NewsletterBlock_mailhand {
+	background: {
+		image: url("../image/sample-background.png");
+		repeat: no-repeat;
+		size: 41.11328125vw 34.1796875vw;
+		position: -.04882812vw -27.00195313vw;
+	}
+	width: 1.5625vw;
+	height: 7.12890625vw;
+	transform-origin: 50% 91%;
+}
+.NewsletterBlock_content-last {
+	width: 50%;
+}
+.NewsletterBlock_title {
+	font-family: $comopact-font;
+	margin-bottom: 18px;
+	font-size: 30px;
+	text-transform: uppercase;
+	font-weight: 400;
+	text-align: left;
+	color: $black;
+}
+.NewsletterBlock_description {
+	font-family: $ubisoft-regular-font;
+	color: $black;
+	text-align: left;
+	font-size: 19px;
+	line-height: 32px;
+	padding-right: 25vw;
+	margin-bottom: 18px;
+}
+.NewsletterBlock_formContainer {
+	position: relative;
+}
+.NewsletterBlock_form {
+	display: flex;
+	height: 60px;
+	font-family: $ubisoft-regular-font;
+}
+.NewsletterBlock_mail {
+	border-radius: 0;
+	margin: 0;
+	height: 100%;
+	background-color: #eee;
+	padding: 0 12px;
+	border: 1px solid $black;
+	font-size: 19px;
+	line-height: 22px;
+	&:focus {
+		outline: 0;
+	}
+}
+.NewsletterBlock_submit {
+	height: 100%;
+	padding: 0 1.5625em;
+	background-color: $black;
+	cursor: pointer;
+	font: 18px $comopact-font;
+	text-transform: uppercase;
+	color: $white;
+	letter-spacing: .025em;
+	border: 0;
+	&:hover {
+		color: $cayan;
+	}
+}
+/*Load more block*/ 
+.LoadMoreBlock {
+	width: 100%;
+	height: 130px;
+	background-color: $cayan;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+.LoadMoreBlock_text {
+	font-family: $comopact-font;
+	font-size: 30px;
+	text-transform: uppercase;
+	font-weight: 400;
+	position: relative;
+	bottom: -3px;
+}

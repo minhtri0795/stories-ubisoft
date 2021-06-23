@@ -1,17 +1,22 @@
-:root {
-  --Ubisoft-font: "Ubisoft-font";
-  --Ubisoft-font-regular: "Ubisoft-font-regular";
-  --Compact-font: "compacta-bt-bold";
-}
+/*Setting*/
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
+
 * {
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
   margin: 0;
   padding: 0;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
 }
 
 @font-face {
@@ -20,42 +25,67 @@ html {
   font-weight: 400;
   font-style: normal;
 }
+
 @font-face {
   font-family: Ubisoft-font-regular;
   src: url("../font/ubisoft-font/Roboto-Regular.woff") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
+
 @font-face {
   font-family: compacta-bt-bold;
   src: url("../font/compact-font/CompactaBT-Bold.woff");
 }
-a {
-  display: block;
-  text-decoration: none;
-  color: inherit;
+
+/*Font*/
+/*Color*/
+/*Animation*/
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.6;
+  }
+  to {
+    opacity: 1;
+  }
 }
-.AppContainer {
-  overflow: hidden;
-  position: relative;
+@keyframes fade {
+  from {
+    opacity: 0.6;
+  }
+  to {
+    opacity: 1;
+  }
 }
-.Main {
-  min-height: calc(100vh - 50px);
-}
+
+/*Header*/
 .MenuBar {
   height: 50px;
   position: fixed;
   top: 0;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   background-color: black;
   z-index: 3;
 }
+
 .MenuBar_ButtonContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 100%;
   position: relative;
@@ -66,31 +96,29 @@ a {
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 130px;
   background-color: #57ffab;
   color: black;
   cursor: pointer;
 }
-.MenuIcon {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  /* align-items: center; */
-  width: 15px;
-  height: 15px;
-  margin-right: 18px;
-}
-.MenuBar_IconLine {
-  fill: #000;
-  transition: fill 0.4s ease-out;
-}
+
 .MenuBar_menuButton .MenuButton_Title {
   position: relative;
   font-family: compacta-bt-bold, sans-serif;
+  -webkit-transition: color 0.4s ease-out;
   transition: color 0.4s ease-out;
   font-size: 18px;
 }
@@ -104,47 +132,95 @@ a {
   color: #57ffab;
 }
 
+.MenuBar_menuButton:hover .MenuBar_buttonVeil {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.MenuIcon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 15px;
+  height: 15px;
+  margin-right: 18px;
+}
+
+.MenuBar_IconLine {
+  fill: #000;
+  -webkit-transition: fill 0.4s ease-out;
+  transition: fill 0.4s ease-out;
+}
+
 .MenuBar_buttonVeil {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  transform: scaleX(0);
-  transform-origin: left;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: left;
+          transform-origin: left;
   background-color: #000;
+  -webkit-transition: -webkit-transform 0.4s ease-out;
+  transition: -webkit-transform 0.4s ease-out;
   transition: transform 0.4s ease-out;
+  transition: transform 0.4s ease-out, -webkit-transform 0.4s ease-out;
   z-index: -1;
 }
-.MenuBar_menuButton:hover .MenuBar_buttonVeil {
-  transform: scaleX(1);
-}
+
 .MenuBar_searchButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 17px;
   background-color: #888;
   color: white;
   cursor: pointer;
+  -webkit-transition: background-color 0.4s ease-out;
   transition: background-color 0.4s ease-out;
 }
 
 .MenuBar_searchButton i {
   font-size: 12px;
+  -webkit-transition: -webkit-transform 0.4s ease-out;
+  transition: -webkit-transform 0.4s ease-out;
   transition: transform 0.4s ease-out;
+  transition: transform 0.4s ease-out, -webkit-transform 0.4s ease-out;
 }
+
 .MenuBar_searchButton:hover {
   background-color: #aaa;
 }
+
 .MenuBar_searchButton:hover i {
-  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
+
 .MenuBar_Logo {
   overflow: hidden;
   height: 100%;
   padding-top: 10px;
 }
+
+.MenuBar_Logo img {
+  width: 100%;
+}
+
 .MenuBar_logoImg {
   cursor: pointer;
   background-repeat: no-repeat;
@@ -153,33 +229,68 @@ a {
   height: 32px;
   background-position: -585px -503.5px;
   background-size: 842px 700px;
-  transform: translateY(100px);
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+  -webkit-transition: -webkit-transform 0.4s ease-out;
+  transition: -webkit-transform 0.4s ease-out;
   transition: transform 0.4s ease-out;
+  transition: transform 0.4s ease-out, -webkit-transform 0.4s ease-out;
 }
-.MenuBar_Logo img {
-  width: 100%;
-}
+
 .MenuBar_PlusMenu {
-  font-family: var(--Ubisoft-font-regular);
+  font-family: Ubisoft-font-regular;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 192px;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   height: 100%;
   position: relative;
   font-weight: 200;
   cursor: pointer;
 }
+
+.MenuBar_PlusMenu:hover .PlusMenu {
+  display: block;
+  opacity: 1;
+}
+
+.MenuBar_PlusMenu:hover .PlusButton_buttonVeil {
+  width: 100%;
+}
+
+.MenuBar_PlusMenu:hover .MenuBar_PlusMenuButton {
+  color: #000;
+}
+
+.MenuBar_PlusMenu::before {
+  position: absolute;
+  content: "";
+  border-left: 1px solid #888;
+  height: 100%;
+  left: 0;
+}
+
 .PlusButton_buttonVeil {
   position: absolute;
   right: 0;
   height: 100%;
   width: 0;
   background-color: #57ffab;
+  -webkit-transition: 0.4s ease-out;
   transition: 0.4s ease-out;
   z-index: -1;
 }
+
 .PlusMenu {
   position: absolute;
   top: -200px;
@@ -189,19 +300,18 @@ a {
   height: auto;
   background-color: #000;
   font-size: 14px;
-  font-family: var(--Ubisoft-font-regular),sans-serif;
+  font-family: Ubisoft-font-regular, sans-serif;
   cursor: pointer;
   z-index: -1;
+  -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
-.PlusMenu.show{
+
+.PlusMenu.show {
   top: 50px;
   opacity: 1;
 }
-.MenuBar_PlusMenu:hover .PlusMenu{
-  display: block;
-  opacity: 1;
-}
+
 .PlusMenu_item {
   list-style: none;
   position: relative;
@@ -210,7 +320,8 @@ a {
   cursor: pointer;
   position: relative;
 }
-.PlusMenu_item::after{
+
+.PlusMenu_item::after {
   position: absolute;
   content: '';
   top: 0;
@@ -229,52 +340,50 @@ a {
   cursor: pointer;
   color: #b5b5b5;
   padding-left: 20px;
+  -webkit-transition: color 0.2s ease;
   transition: color 0.2s ease;
 }
-.PlusMenu_link:hover{
+
+.PlusMenu_link:hover {
   color: white;
-}
-.MenuBar_PlusMenu:hover .PlusButton_buttonVeil {
-  width: 100%;
-}
-.MenuBar_PlusMenu::before {
-  position: absolute;
-  content: "";
-  border-left: 1px solid #888;
-  height: 100%;
-  left: 0;
 }
 
 .MenuBar_PlusMenuButton {
   color: #888;
   font-size: 18px;
   font-weight: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 100%;
   position: relative;
+  -webkit-transition: color 0.4s ease-out;
   transition: color 0.4s ease-out;
-  transition-delay: 0.1s;
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
 }
+
 .MenuBar_PlusMenuButton i {
+  -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
-.MenuBar_PlusMenu:hover .MenuBar_PlusMenuButton {
-  color: #000;
-}
+
 .MenuBar_PlusMenuButton span {
   margin: 0 8px;
 }
+
 .MenuBar_PlusLogo {
   height: 60%;
 }
+
 .MenuBar_PlusLogo img {
   height: 100%;
 }
 
-
-/* main menu */
-
+/*Main menu*/
 .MainMenu {
   position: absolute;
   top: 50px;
@@ -285,77 +394,135 @@ a {
   z-index: 4;
   border-top: 1px solid #ccc;
   opacity: 0;
+  -webkit-transition: 0.4s ease-out;
   transition: 0.4s ease-out;
 }
-.MainMenu.show{
+
+.MainMenu.show {
   left: 0;
   opacity: 1;
 }
+
 .MainMenu_mainContainer {
   width: 87.5vw;
   margin: 0 auto;
 }
+
 .MainMenu_topContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   margin: 6.25vh 0;
 }
+
 .MainMenu_primaryMenuContainer {
   width: 25vw;
 }
+
 .MainMenu_primaryMenuItem {
   list-style: none;
   font-size: 66px;
   line-height: 66px;
   margin-bottom: 6px;
 }
+
 .MainMenu_primaryMenuLink {
   color: #383838;
   text-transform: uppercase;
-  font-family: var(--Compact-font);
+  font-family: compacta-bt-bold;
+  -webkit-transition: .3s ease color;
   transition: .3s ease color;
 }
+
 .MainMenu_primaryMenuLink:hover {
   color: #f11d6b;
 }
+
 .MainMenu_primaryMenuLink.active {
   color: #f11d6b;
 }
+
 .MainMenu_imageMenuContainer {
   width: 62.5vw;
   height: 25vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: right;
-  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: right;
+      -ms-flex-align: right;
+          align-items: right;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .MainMenu_imageMenuCase {
   position: relative;
   overflow: hidden;
 }
-.MainMenu_imageMenuCase-1, .MainMenu_imageMenuCase-2 {
-  height: 25vw;
-}
+
 .MainMenu_imageMenuCase-1 {
+  height: 25vw;
   width: 24.375vw;
 }
-.MainMenu_imageMenuCase-1 .MainMenu_imageMenuTitle{
+
+.MainMenu_imageMenuCase-1 .MainMenu_imageMenuTitle {
   font-size: 29px;
 }
+
+.MainMenu_imageMenuCase-2 {
+  height: 25vw;
+  width: 18.125vw;
+}
+
 .MainMenu_imageMenuInnerCase {
   width: 100%;
   height: 100%;
 }
+
 .MainMenu_imageMenuLink {
   display: block;
   position: relative;
   width: 100%;
   height: 100%;
   background-color: #212121;
-  transition: transform 0.3s cubic-bezier(0,.01,1,.9);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0, 0.01, 1, 0.9);
+  transition: -webkit-transform 0.3s cubic-bezier(0, 0.01, 1, 0.9);
+  transition: transform 0.3s cubic-bezier(0, 0.01, 1, 0.9);
+  transition: transform 0.3s cubic-bezier(0, 0.01, 1, 0.9), -webkit-transform 0.3s cubic-bezier(0, 0.01, 1, 0.9);
 }
+
+.MainMenu_imageMenuLink:hover .MaimenuTimeCouter {
+  opacity: 1;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.MainMenu_imageMenuLink:hover .MainMenu_imageMenuTitle {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+}
+
+.MainMenu_imageMenuLink:hover .MainMenu_imageMenuBackground {
+  background-color: #f11d6b;
+  -webkit-transform: scale(1.06);
+          transform: scale(1.06);
+  -webkit-transition: background-color .3s ease-out,-webkit-transform .3s ease-out;
+  transition: background-color .3s ease-out,-webkit-transform .3s ease-out;
+  transition: background-color .3s ease-out,transform .3s ease-out;
+  transition: background-color .3s ease-out,transform .3s ease-out,-webkit-transform .3s ease-out;
+}
+
 .MainMenu_imageMenuBackground {
   position: absolute;
   top: 0;
@@ -365,13 +532,20 @@ a {
   background-size: cover;
   background-position: center center;
   background-blend-mode: multiply;
+  -webkit-transition: background-color .2s ease-in,-webkit-transform .2s ease-in;
+  transition: background-color .2s ease-in,-webkit-transform .2s ease-in;
   transition: background-color .2s ease-in,transform .2s ease-in;
+  transition: background-color .2s ease-in,transform .2s ease-in,-webkit-transform .2s ease-in;
 }
+
 .TimeCounter.MaimenuTimeCouter {
   opacity: 1;
-  transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: 0.2s ease-out;
   transition: 0.2s ease-out;
 }
+
 .MainMenu_imageMenuTitleContainer {
   width: 100%;
   position: absolute;
@@ -379,171 +553,235 @@ a {
   left: 0;
   overflow: hidden;
 }
+
 .MainMenu_imageMenuTitle {
   color: #fff;
   text-transform: uppercase;
-  font-family: var(--Compact-font);
+  font-family: compacta-bt-bold;
   font-size: 18px;
   opacity: 0;
-  transform: translateX(-20%) translateZ(0);
+  -webkit-transform: translateX(-20%) translateZ(0);
+          transform: translateX(-20%) translateZ(0);
+  -webkit-transition: opacity .2s ease-in,-webkit-transform .2s ease-in;
+  transition: opacity .2s ease-in,-webkit-transform .2s ease-in;
   transition: transform .2s ease-in,opacity .2s ease-in;
+  transition: transform .2s ease-in,opacity .2s ease-in,-webkit-transform .2s ease-in;
   padding: 5%;
-}
-.MainMenu_imageMenuLink:hover .MaimenuTimeCouter {
-  opacity: 1;
-  transform: translateX(0%);
-} 
-.MainMenu_imageMenuLink:hover .MainMenu_imageMenuTitle{
-  transform: translateX(0);
-  opacity: 1;
-}
-.MainMenu_imageMenuLink:hover .MainMenu_imageMenuBackground {
-  background-color: #f11d6b;
-  transform: scale(1.06);
-  transition: background-color .3s ease-out,transform .3s ease-out;
-}
-.MainMenu_imageMenuCase-2 {
-  width: 18.125vw;
 }
 
 .MainMenu_imageMenuCase-3, .MainMenu_imageMenuCase-4 {
   height: 12.1875vw;
-}
-.MainMenu_imageMenuCase-3 {
-  width: 18.125vw;
-}
-.MainMenu_imageMenuCase-4 {
   width: 18.125vw;
 }
 
 .MainMenu_bottomContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
+
 .MainMenu_secondaryMenuContainer {
   width: 25vw;
 }
+
 .MainMenu_secondaryMenuItem:first-child {
   margin-top: 0;
 }
+
 .MainMenu_secondaryMenuLink {
   color: #fff;
-  font-family: var(--Ubisoft-font);
+  font-family: Ubisoft-font;
   font-size: 19px;
   line-height: 26px;
   text-transform: uppercase;
+  -webkit-transition: color .3s ease;
   transition: color .3s ease;
 }
+
 .MainMenu_secondaryMenuLink:hover {
   color: #57ffab;
 }
 
 .MainMenu_tertiaryMenuContainer {
   width: 43.75vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
-.MainMenu_tertiaryMenuItem:nth-child(-n+2) {
-  margin-top: 0;
-}
+
 .MainMenu_tertiaryMenuItem {
   list-style: none;
   margin-top: .5em;
   width: 18.75vw;
 }
+
+.MainMenu_tertiaryMenuItem:nth-child(-n+2) {
+  margin-top: 0;
+}
+
 .MainMenu_tertiaryMenuLink {
   color: #555;
   font-size: 19px;
   line-height: 26px;
-  font-family: var(--Ubisoft-font);
+  font-family: Ubisoft-font;
   text-transform: uppercase;
+  -webkit-transition: color .3s ease;
   transition: color .3s ease;
 }
+
 .MainMenu_tertiaryMenuLink:hover {
   color: #fff;
 }
+
 .MainMenu_shareContainer {
   width: 18.75vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-bottom: 5px;
 }
+
 .MainMenu_shareTitle {
   margin-bottom: 18px;
   font-size: 18px;
   letter-spacing: 1.2px;
-  font-family: var(--Compact-font);
+  font-family: compacta-bt-bold;
   text-transform: uppercase;
   color: #fff;
   text-align: center;
 }
+
 .ShareBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
-.ShareBar_socialContainer:nth-child(1) {
-  margin-left: -2px;
-  
-}
+
 .ShareBar_socialContainer {
   width: 3.125vw;
-    height: 3.125vw;
-    border: 2px solid #fff;
-    overflow: hidden;
-    transition: border-color .4s ease-out;
-    cursor: pointer;
-    outline: 0;
+  height: 3.125vw;
+  border: 2px solid #fff;
+  overflow: hidden;
+  -webkit-transition: border-color .4s ease-out;
+  transition: border-color .4s ease-out;
+  cursor: pointer;
+  outline: 0;
 }
-.ShareBar_socialLinkWrapper {
-  display: flex;
-  flex-direction: column;
-  transform: translateZ(0);
-  transition: transform .3s ease;
-  height:200%;
+
+.ShareBar_socialContainer:nth-child(1) {
+  margin-left: -2px;
 }
-.ShareBar_socialLink {
-  height: 50%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.ShareBar_socialLink i{
-  color: white;
-  background-color: black;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-}
-.ShareBar_socialContainer .ShareBar_socialLink:nth-child(2) i{
+
+.ShareBar_socialContainer .ShareBar_socialLink:nth-child(2) i {
   color: black;
   background-color: white;
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-.ShareBar_socialContainer:hover .ShareBar_socialLinkWrapper {
-  transform: translateY(-50%) translateZ(0);
-}
-/* Cover Block */
 
+.ShareBar_socialContainer:hover .ShareBar_socialLinkWrapper {
+  -webkit-transform: translateY(-50%) translateZ(0);
+          transform: translateY(-50%) translateZ(0);
+}
+
+.ShareBar_socialLinkWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  -webkit-transition: -webkit-transform .3s ease;
+  transition: -webkit-transform .3s ease;
+  transition: transform .3s ease;
+  transition: transform .3s ease, -webkit-transform .3s ease;
+  height: 200%;
+}
+
+.ShareBar_socialLink {
+  height: 50%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.ShareBar_socialLink i {
+  color: white;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/*HOME PAGE*/
+.AppContainer {
+  overflow: hidden;
+  position: relative;
+}
+
+.Main {
+  min-height: calc(100vh - 50px);
+}
+
+/*Cover block*/
 .CoverBlock {
   position: relative;
   top: 50px;
   height: auto;
+  margin-top: 0;
   margin-bottom: 30px;
   width: 100%;
   padding-top: 0;
-  margin-top: 0;
   z-index: 0;
 }
+
 .CoverBlock_Background {
   position: absolute;
   min-height: 100vw;
@@ -551,25 +789,28 @@ a {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: url('../image/home.jpg');
+  background-image: url("../image/home.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
+
 .CoverBlock_mainContainer {
   position: relative;
   margin: auto;
   width: 87.5vw;
   padding: 6.25vw 0;
 }
+
 .CoverBlock_storiesLogo {
-  font-family: var(--Ubisoft-font);
+  font-family: Ubisoft-font;
   position: relative;
   top: 0;
   margin: 6.25vw 0;
-  /* opacity: 1.5; */
-  transform: translateY(40px);
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
 }
+
 .StoriesLogo_topLine {
   position: absolute;
   top: -8px;
@@ -582,61 +823,76 @@ a {
   color: white;
   text-transform: uppercase;
 }
+
 .StoriesLogo_bottomLine {
   position: absolute;
   top: 73%;
   left: 59.6%;
-  font-size: 1.3vw;
   min-width: 200px;
   font-size: 20px;
   line-height: 22px;
   color: white;
   text-transform: uppercase;
 }
+
 .StoriesLogo_stories {
   position: relative;
   margin: auto;
-  background-repeat: no-repeat;
-  background-image: url("../image/sample-background.png");
   width: 40.3125vw;
   height: 18.97873711vw;
+  background-image: url("../image/sample-background.png");
   background-size: 58.32152062vw 48.48582474vw;
   background-position: -0.06926546vw -19.18653351vw;
+  background-repeat: no-repeat;
 }
+
 .CoverBlock_posts {
   width: 100%;
 }
+
 .CoverBlock_post {
   margin-bottom: 3.4375em;
 }
+
+.CoverBlock_post:hover .CoverBlock_titleLine {
+  width: 150px;
+}
+
 .CoverBlock_formatLink {
-  font-family: var(--Ubisoft-font);
+  position: relative;
+  font-family: Ubisoft-font;
+  font-size: 20px;
   color: #57ffab;
-  padding: 0.0625em 0.3125em;
-  background: #000;
+  font-weight: 400;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   cursor: pointer;
   text-transform: uppercase;
-  font-size: 20px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  padding: 0.0625em 0.3125em;
+  background: #000;
 }
+
 .CoverBlock_postTitle {
   font-family: compacta-bt-bold;
   font-size: 62px;
   color: white;
   text-transform: uppercase;
   width: 37.5vw;
-  text-shadow: 0 1px 10px rgb(0 0 0 / 20%);
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
   margin-top: 0.375em;
 }
+
 .CoverBlock_titleLine {
   height: 2px;
   width: 0;
   background-color: #57ffab;
+  -webkit-transition: width 0.3s ease;
   transition: width 0.3s ease;
 }
-.CoverBlock_post:hover .CoverBlock_titleLine {
-  width: 150px;
-}
+
 .CoverBlock_more {
   display: block;
   width: 14rem;
@@ -644,109 +900,142 @@ a {
   right: 6.25vw;
   bottom: 6.25vw;
   cursor: pointer;
-  transform-origin: top right;
-  transform: rotate(90deg);
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
+
 .LabelledArrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 1vw;
 }
-.LabelledArrow_title {
-  font-family: var(--Ubisoft-font);
-  text-transform: uppercase;
-  margin-right: 20px;
-  flex-grow: 0;
-  color: white;
-  font-size: 19px;
-}
-.Arrow-green {
-  color: #57ffab;
-}
-.Arrow {
-  height: 35px;
-  width: 20%;
-  position: relative;
-  transition: 0.4s ease-out;
-}
+
 .LabelledArrow:hover .Arrow {
   height: 45px;
   width: 30%;
 }
+
+.LabelledArrow_title {
+  font-family: Ubisoft-font;
+  text-transform: uppercase;
+  margin-right: 20px;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  color: white;
+  font-size: 19px;
+}
+
+.Arrow {
+  height: 35px;
+  width: 20%;
+  position: relative;
+  -webkit-transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
+}
+
+.Arrow-green {
+  color: #57ffab;
+}
+
 .Arrow_primaryLine {
-  width: 100%;
-  height: 1px;
   position: absolute;
   top: 50%;
   left: 0;
+  width: 100%;
+  height: 1px;
   background-color: currentColor;
 }
+
 .Arrow_secondaryLine-upperLine {
   position: absolute;
   top: 0;
   right: 0;
-  transform-origin: bottom;
-  transform: rotate(-45deg);
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
+
 .Arrow_secondaryLine {
   position: absolute;
-  width: 1px;
   height: 50%;
+  width: 1px;
   background-color: currentColor;
 }
+
 .Arrow_secondaryLine-lowerLine {
   position: absolute;
   bottom: 0;
   right: 0;
-  transform: rotate(45deg);
-  transform-origin: top;
-}
-.Arrow_secondaryLine {
-  position: absolute;
-  width: 1px;
-  height: 50%;
-  background-color: currentColor;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transform-origin: top;
+          transform-origin: top;
 }
 
-/* Folder Review Block */
+/*Folder Preview Block*/
 .FolderPreviewBlock {
   padding: 30px 0;
   position: relative;
-  /* top: 80px; */
   width: 100vw;
   overflow: hidden;
 }
+
 .FolderPreviewBlock.Small {
   display: none;
 }
-.FolderPreviewBlock.Tablet.Mobile{
+
+.FolderPreviewBlock.Tablet.Mobile {
   display: none;
 }
+
 .FolderPreviewBlock_wrapper {
   position: relative;
   width: 100vw;
   overflow: hidden;
 }
+
 .FolderPreviewBlock_wrapper.Small {
   width: 87.5vw;
   margin: 0 auto;
 }
+
 .FolderPreviewBlock_Img {
   position: absolute;
   width: 100%;
   height: auto;
+  -webkit-transition: -webkit-transform 0.3s ease-in;
+  transition: -webkit-transform 0.3s ease-in;
   transition: transform 0.3s ease-in;
-  transition-delay: 0.1s;
+  transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
 }
+
 .FolderPreviewBlock_mainContainer {
   position: relative;
   height: 56.25vw;
   margin: 0 6.25vw;
 }
+
 .FolderPreviewBlock_previewContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: absolute;
   bottom: 0;
@@ -755,97 +1044,144 @@ a {
   padding: 6.25vw;
   background-color: #000;
 }
+
+.FolderPreviewBlock_previewContainer.Middle {
+  display: block;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 60px 20px;
+  background-color: #000;
+}
+
+.FolderPreviewBlock_previewContainer.Middle .FolderPreviewBlock_previewBackground {
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.FolderPreviewBlock_previewContainer.Middle .FolderPreviewBlock_previewContent {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.FolderPreviewBlock_previewContainer.Middle .FolderPreviewBlock_details {
+  width: 40%;
+}
+
 .FolderPreviewBlock_previewBackground {
   background-color: #000;
-  /* transform-origin: bottom center; */
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  transform: matrix(1, 0, 0, 1, 0, 0);
+  -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+          transform: matrix(1, 0, 0, 1, 0, 0);
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
   transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
 }
 
-.FolderPreviewBlock_previewContainer.Middle {
-  display: block;
-  height: fit-content;
-    margin: 0 auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    padding: 60px 20px;
-    background-color: #000;
-}
-.FolderPreviewBlock_previewContainer.Middle .FolderPreviewBlock_previewBackground {
-  transform-origin: center center;
-}
 .FolderPreviewBlock_previewContent {
   position: relative;
   width: 37.5vw;
   color: #fff;
 }
-.FolderPreviewBlock_previewContainer.Middle .FolderPreviewBlock_previewContent {
-    position: relative;
-    width: fit-content;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
+
 .FolderPreviewBlock_categoryLink {
-  font-family: var(--Ubisoft-font);
+  position: relative;
+  font-family: Ubisoft-font;
+  font-size: 20px;
   color: #57ffab;
-  background: #000;
+  font-weight: 400;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   cursor: pointer;
   text-transform: uppercase;
-  font-size: 20px;
-  position: relative;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  background: #000;
 }
 
 .FolderPreviewBlock_title {
   margin: 30px 0;
-  font-family: compacta-bt-bold;
-  font-size: 62px;
-  text-transform: uppercase;
+  font: 62px compacta-bt-bold;
   color: #fff;
+  text-transform: uppercase;
 }
+
 .FolderPreviewBlock_description {
   margin-bottom: 30px;
-  font-family: var(--Ubisoft-font-regular);
-  font-size: 17px;
+  font: 17px Ubisoft-font-regular;
   color: #fff;
 }
+
 .FolderPreviewBlock_details {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-.FolderPreviewBlock_previewContainer.Middle .FolderPreviewBlock_details {
-  width: 40%;
-}
+
 .RelativeDate {
-  font-family: var(--Ubisoft-font-regular);
+  font-family: Ubisoft-font-regular;
   color: #aaa;
-  font-size: 14px;
-  font-weight: 600;
+  font: 14px 600;
 }
+
 .FolderPreviewBlock_relativeDate {
-  font-family: var(--Ubisoft-font-regular);
+  font-family: Ubisoft-font-regular;
   color: #aaa;
   font-size: 14px;
 }
+
 .TaxonomyLike {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 .TaxonomyButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-decoration: none;
-  line-height: 32px;
   height: 32px;
   width: auto;
   padding: 0 14px;
@@ -853,81 +1189,111 @@ a {
   background-color: #fff;
   cursor: pointer;
   text-align: left;
-  font-family: var(--Ubisoft-font);
-  font-size: 14px;
+  font: 14px Ubisoft-font;
   text-transform: uppercase;
 }
+
 .TaxonomyButton.TaxomyLikeButton {
   color: #f11d6b;
   margin-left: 5px;
-  font-size: 12px;
-  font-weight: 600;
+  font: 12px 600;
 }
 
-/* Triple Block */
+/*Triple Block*/
 .TripleBlock {
+  position: relative;
   width: 100vw;
   text-align: center;
   padding: 2.08333333vw 6.25vw;
   overflow: hidden;
-  position: relative;
-  /* top: 50px; */
 }
+
 .TripleBlock.TripleBlockTwo {
   top: 0;
 }
+
 .TripleBlock_wrapper {
   display: block;
-  padding-top: 2.08333333vw;
-  padding-bottom: 2.08333333vw;
+  padding: 2.08333333vw 0;
 }
+
 .TripleBlock_title {
   font-family: compacta-bt-bold;
   font-size: 240px;
   line-height: 1em;
   color: #eee;
   text-transform: uppercase;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
+
 .TripleBlock_mainContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-top: -6.875em;
 }
+
 .PostPreview {
-  width: 25vw;
   position: relative;
+  width: 25vw;
   display: block;
   text-align: left;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
+
+.PostPreview:hover .PostImage_border {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.PostPreview:hover .PostPreview_imageContainer img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.PostPreview:hover .PostPreview_title {
+  background-position: -100%;
+}
+
 .PostPreview_imageContainer {
   position: relative;
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.05);
 }
+
 .PostPreview_imageContainer img {
   width: 100%;
-  transform: scale(1);
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: 0.2s ease-out;
   transition: 0.2s ease-out;
 }
+
 .PostImage_border {
+  position: absolute;
   width: 100%;
   height: 100%;
-  position: absolute;
   top: 0;
   left: 0;
   border: 7px solid #57ffab;
-  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
 }
-.PostPreview:hover .PostImage_border {
-  transform: scale(1);
-}
-.PostPreview:hover .PostPreview_imageContainer img {
-  transform: scale(1.1);
-}
+
 .TimeCounter {
   position: absolute;
   top: 0;
@@ -938,116 +1304,106 @@ a {
   width: 50px;
   height: 50px;
   padding-top: 0.3125em;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
 }
+
 .TimeCounter_duration {
-  font-family: compacta-bt-bold;
-  font-size: 30px;
+  font: 30px compacta-bt-bold;
   line-height: 34px;
   color: #57ffab;
 }
+
 .TimeCounter_unit {
-  font-family: var(--Ubisoft-font);
-  font-size: 8px;
+  font: 8px Ubisoft-font;
   line-height: 9px;
   margin-top: -5px;
   text-transform: uppercase;
 }
+
 .PostPreview_formatLink {
-  margin: 20px 0;
-  color: #821ae8;
   position: relative;
+  font-family: Ubisoft-font;
+  font-size: 20px;
+  color: #821ae8;
+  font-weight: 400;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   cursor: pointer;
-  font-family: var(--Ubisoft-font), sans-serif;
+  text-transform: uppercase;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  text-transform: uppercase;
-  font-size: 19px;
-  font-weight: 400;
+  margin: 20px 0;
 }
+
+.PostPreview_formatLink:hover .FormatLink_contentTypeLine {
+  width: 100%;
+}
+
 .FormatLink_contentTypeLine {
   position: absolute;
   bottom: -4px;
   left: 0;
   height: 3px;
   margin-top: 2px;
-  background-color: #823ae9;
-  /* transform: matrix(1, 0, 0, 1, 172, 0);  */
+  background-color: #821ae8;
   width: 0%;
+  -webkit-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
 }
-.PostPreview_formatLink:hover .FormatLink_contentTypeLine {
-  width: 100%;
-}
+
 .PostPreview_title {
-  font-family: var(--Compact-font);
+  font-family: compacta-bt-bold;
   font-size: 30px;
   line-height: 34px;
   text-transform: uppercase;
-  background-image: linear-gradient(
-    to right,
-    #000 50%,
-    rgb(241, 29, 107) 50%,
-    rgb(241, 29, 107)
-  );
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #000), color-stop(50%, #f11d6b), to(#f11d6b));
+  background-image: linear-gradient(to right, #000 50%, #f11d6b 50%, #f11d6b);
   background-size: 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  -webkit-transition: 0.2s ease-out;
   transition: 0.2s ease-out;
 }
-.PostPreview:hover .PostPreview_title {
-  background-position: -100%;
-}
+
 .PostPreview_details {
   height: 65px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-/* slideshowBlock */
+/*Slide show block*/
 .SlideshowPreviewBlock {
-  padding-top: 2.08333333vw;
-  padding-bottom: 2.08333333vw;
+  padding: 2.08333333vw 0;
   margin-top: 2.08333333vw;
 }
-.SlideshowPreviewBlock_wrapper {
-  padding: 0 6.25vw;
-}
-.SlideshowPreviewBlock_formatLink {
-  color: #821ae8;
-  position: relative;
-  width: fit-content;
-  cursor: pointer;
-  font-family: var(--Ubisoft-font), sans-serif;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  text-transform: uppercase;
-  font-size: 19px;
-  font-weight: 400;
-}
-.SlideshowPreviewBlock_formatLink:hover .FormatLink_contentTypeLine {
-  width: 100%;
-}
-.SlideshowPreviewBlock_title {
-  width: 87.5vw;
-  margin: 0 auto;
-  font-family: var(--Compact-font);
-  font-size: 62px;
-  text-transform: uppercase;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  color: #000;
-}
+
 .SlideshowPreviewBlock .Slideshow_wrapper {
   width: 87.5vw;
   margin: auto;
 }
+
 .SlideshowPreviewBlock .Slideshow_innerWrapper {
   height: 49.21875vw;
   position: relative;
@@ -1055,18 +1411,57 @@ a {
   background: #000;
   overflow: hidden;
 }
+
+.SlideshowPreviewBlock_wrapper {
+  padding: 0 6.25vw;
+}
+
+.SlideshowPreviewBlock_formatLink {
+  position: relative;
+  font-family: Ubisoft-font;
+  font-size: 20px;
+  color: #821ae8;
+  font-weight: 400;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.SlideshowPreviewBlock_formatLink:hover .FormatLink_contentTypeLine {
+  width: 100%;
+}
+
+.SlideshowPreviewBlock_title {
+  width: 87.5vw;
+  margin: 0 auto;
+  font-family: compacta-bt-bold;
+  font-size: 62px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: #000;
+}
+
 .Slideshow_slide img {
   width: 100%;
 }
+
 .Slideshow_dots {
   position: relative;
   width: 100%;
   text-align: center;
   margin-top: 15px;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
-.next-zone,
-.prev-zone {
+
+.next-zone {
   position: absolute;
   right: 0;
   top: 0;
@@ -1074,44 +1469,65 @@ a {
   width: 50%;
   height: 100%;
 }
+
+.next-zone:hover .next {
+  right: 0;
+}
+
 .prev-zone {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  height: 100%;
   left: 0;
 }
-.prev,
-.next {
+
+.prev-zone:hover .prev {
+  left: 0;
+}
+
+.control, .prev, .next {
   position: absolute;
   cursor: pointer;
   top: 50%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   margin-top: -20px;
   padding: 16px;
-  padding-left: 0px;
   color: #57ffab;
   background-color: #000;
   font-size: 18px;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   cursor: pointer;
   height: 55px;
   width: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   justify-content: center;
-  justify-content: center;
+  -webkit-transition: 0.4s ease-out;
   transition: 0.4s ease-out;
 }
-.next {
-  padding-right: 0;
-  right: -80px;
-}
+
 .prev {
   padding-left: 0px;
   left: -80px;
 }
-.next-zone:hover .next {
-  right: 0;
+
+.next {
+  padding-right: 0;
+  right: -80px;
 }
-.prev-zone:hover .prev {
-  left: 0;
-}
+
 .dot {
   position: relative;
   display: inline-block;
@@ -1123,45 +1539,49 @@ a {
   margin-right: 8px;
   cursor: pointer;
 }
+
 .dot.active {
-  transform: matrix(1.4, 0, 0, 1.4, 0, 0);
-  border-color: rgb(87, 255, 171);
-  background-color: rgb(87, 255, 171);
+  -webkit-transform: matrix(1.4, 0, 0, 1.4, 0, 0);
+          transform: matrix(1.4, 0, 0, 1.4, 0, 0);
+  border-color: #57ffab;
+  background-color: #57ffab;
 }
+
 .fade {
-  animation: fade 0.8s ease-out;
+  -webkit-animation: fade 0.8s ease-out;
+          animation: fade 0.8s ease-out;
 }
 
-@keyframes fade {
-  from {
-    opacity: 0.6;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-/* Newsletter Block */
-
+/*Newletter Block*/
 .NewsletterBlock {
   width: 100vw;
-  padding-top: 2.08333333vw;
-  padding-bottom: 2.08333333vw;
+  padding: 2.08333333vw 0;
 }
+
 .NewsletterBlock_wrapper {
   background-color: #eee;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 6.25vw 0;
 }
+
 .NewsletterBlock_content-first {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column-reverse;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
   padding-bottom: 12px;
   width: 50%;
 }
+
 .NewsletterBlock_imageContainer {
   position: relative;
-  align-self: flex-end;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   border-radius: 50%;
   background-color: #57ffab;
   overflow: hidden;
@@ -1169,38 +1589,46 @@ a {
   width: 18.75vw;
   margin-right: 6.25vw;
 }
+
 .NewsletterBlock_mailbox {
-  background-repeat: no-repeat;
   background-image: url("../image/sample-background.png");
-  width: 12.5vw;
-  height: 13.69628906vw;
+  background-repeat: no-repeat;
   background-size: 41.11328125vw 34.1796875vw;
   background-position: -28.56445313vw -.04882812vw;
   position: absolute;
+  width: 12.5vw;
+  height: 13.69628906vw;
   bottom: 0;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
+
 .NewsletterBlock_mailhandWrapper {
   position: absolute;
   bottom: 40%;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
+
 .NewsletterBlock_mailhand {
-  background-repeat: no-repeat;
   background-image: url("../image/sample-background.png");
-  width: 1.5625vw;
-  height: 7.12890625vw;
+  background-repeat: no-repeat;
   background-size: 41.11328125vw 34.1796875vw;
   background-position: -.04882812vw -27.00195313vw;
-  transform-origin: 50% 91%;
+  width: 1.5625vw;
+  height: 7.12890625vw;
+  -webkit-transform-origin: 50% 91%;
+          transform-origin: 50% 91%;
 }
+
 .NewsletterBlock_content-last {
   width: 50%;
 }
+
 .NewsletterBlock_title {
-  font-family: var(--Compact-font);
+  font-family: compacta-bt-bold;
   margin-bottom: 18px;
   font-size: 30px;
   text-transform: uppercase;
@@ -1208,8 +1636,9 @@ a {
   text-align: left;
   color: #000;
 }
+
 .NewsletterBlock_description {
-  font-family: var(--Ubisoft-font-regular);
+  font-family: Ubisoft-font-regular;
   color: #000;
   text-align: left;
   font-size: 19px;
@@ -1217,14 +1646,19 @@ a {
   padding-right: 25vw;
   margin-bottom: 18px;
 }
+
 .NewsletterBlock_formContainer {
   position: relative;
 }
+
 .NewsletterBlock_form {
-  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  font-family: var(--Ubisoft-font-regular);
+  height: 60px;
+  font-family: Ubisoft-font-regular;
 }
+
 .NewsletterBlock_mail {
   border-radius: 0;
   margin: 0;
@@ -1235,35 +1669,46 @@ a {
   font-size: 19px;
   line-height: 22px;
 }
+
 .NewsletterBlock_mail:focus {
   outline: 0;
 }
+
 .NewsletterBlock_submit {
   height: 100%;
   padding: 0 1.5625em;
   background-color: #000;
   cursor: pointer;
-  font-family: var(--Compact-font);
+  font: 18px compacta-bt-bold;
   text-transform: uppercase;
   color: #fff;
-  font-size: 18px;
   letter-spacing: .025em;
   border: 0;
 }
-.NewsletterBlock_submit:hover{
+
+.NewsletterBlock_submit:hover {
   color: #57ffab;
 }
+
+/*Load more block*/
 .LoadMoreBlock {
   width: 100%;
   height: 130px;
   background-color: #57ffab;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   cursor: pointer;
 }
+
 .LoadMoreBlock_text {
-  font-family: var(--Compact-font);
+  font-family: compacta-bt-bold;
   font-size: 30px;
   text-transform: uppercase;
   font-weight: 400;
@@ -1271,127 +1716,168 @@ a {
   bottom: -3px;
 }
 
-
-/* Footer */
-
+/*Footer*/
 .Footer {
   background: #000;
 }
+
 .Footer_footerContent {
   padding: 2% 0;
 }
+
 .Footer_primaryContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-bottom: 2%;
-  flex-direction: row;
-  align-items: stretch;
-  justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .Footer_logoUbisoft {
   margin-left: 40px;
   margin-right: 30px;
-  background-repeat: no-repeat;
   background-image: url("../image/sample-background.png");
-  width: 182px;
-  height: 60px;
   background-position: -585px -441.5px;
   background-size: 842px 700px;
+  background-repeat: no-repeat;
+  width: 182px;
+  height: 60px;
 }
+
 .Footer_separator {
   width: 1px;
   background: #fff;
 }
+
 .Footer_socialLinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .Footer_socialLink {
   margin: 0 0 0 30px;
   position: relative;
 }
+
 .Footer_socialLink-facebook {
-  background-repeat: no-repeat;
   background-image: url("../image/sample-background.png");
-  width: 12px;
-  height: 24px;
+  background-repeat: no-repeat;
   background-position: -817px -393.5px;
   background-size: 842px 700px;
+  width: 12px;
+  height: 24px;
 }
+
 .Footer_socialLink-twitter {
-  background-repeat: no-repeat;
   background-image: url("../image/sample-background.png");
-  width: 24px;
-  height: 20px;
+  background-repeat: no-repeat;
   background-position: -817px -305.5px;
   background-size: 842px 700px;
-}
-.Footer_socialLink-instagram {
-  background-repeat: no-repeat;
-  background-image: url("../image/sample-background.png");
-  width: 20px;
+  width: 24px;
   height: 20px;
+}
+
+.Footer_socialLink-instagram {
+  background-image: url("../image/sample-background.png");
+  background-repeat: no-repeat;
   background-position: -817px -327.5px;
   background-size: 842px 700px;
-}
-.Footer_socialLink-linkedin {
-  background-repeat: no-repeat;
-  background-image: url("../image/sample-background.png");
   width: 20px;
   height: 20px;
+}
+
+.Footer_socialLink-linkedin {
+  background-image: url("../image/sample-background.png");
   background-position: -817px -371.5px;
   background-size: 842px 700px;
-}
-.Footer_socialLink-youtube {
   background-repeat: no-repeat;
-  background-image: url("../image/sample-background.png");
-  width: 28px;
+  width: 20px;
   height: 20px;
+}
+
+.Footer_socialLink-youtube {
+  background-image: url("../image/sample-background.png");
   background-position: -715px -503.5px;
   background-size: 842px 700px;
+  background-repeat: no-repeat;
+  width: 28px;
+  height: 20px;
 }
 
 .Footer_secondaryContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
   height: auto;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
   font-size: 17px;
   margin-left: 13px;
 }
+
 .Footer_navLinks {
   position: relative;
-  font-family: var(--Ubisoft-font);
+  font-family: Ubisoft-font;
   color: #888;
   margin: 0 24px;
   font-size: 17px;
 }
-.Footer_navLinks::before{
-    content: '';
-    display: block;
-    position: absolute;
-    width: 2px;
-    height: .75em;
-    background-color: currentColor;
-    left: -24px;
-    top: .25em;
-    pointer-events: none;
+
+.Footer_navLinks::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 2px;
+  height: .75em;
+  background-color: currentColor;
+  left: -24px;
+  top: .25em;
+  pointer-events: none;
 }
-.Footer_navLinks:first-child::before{
+
+.Footer_navLinks:first-child::before {
   display: none;
 }
+
 .Footer_copyrightBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: auto;
   padding: 1vw 2vw;
-  font-family: var(--Ubisoft-font);
+  font-family: Ubisoft-font;
   font-size: 13px;
   text-transform: uppercase;
   background-color: #212121;
   color: #888;
 }
+
 .Footer_copyrightText {
   line-height: 18px;
   max-width: 1023px;
@@ -1399,23 +1885,25 @@ a {
   text-align: center;
 }
 
-
-/* BRAIN PAGE */
+/*All rest page*/
 .ListHeaderBlock {
   position: relative;
   margin-top: 0;
   padding-top: 0;
   margin-bottom: 50px;
   visibility: inherit;
-    opacity: 1;
-    transform: translateY(50px);
+  opacity: 1;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
 }
+
 .ListHeaderBlock_watermark {
   position: absolute;
   top: 47%;
   left: 70%;
-  transform: translateY(-50%);
-  font-family: var(--Compact-font);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-family: compacta-bt-bold;
   font-size: 240px;
   color: #888;
   text-transform: uppercase;
@@ -1423,8 +1911,12 @@ a {
   opacity: .2;
   white-space: nowrap;
   z-index: 0;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
+
 .ListHeaderBlock_mainContainer {
   padding: 12.5vw 0;
   position: relative;
@@ -1433,16 +1925,19 @@ a {
   margin-left: 6.25vw;
   min-height: 250px;
 }
+
 .ListHeaderBlock_content {
   margin-left: 6.25vw;
   margin-right: 6.25vw;
   position: absolute;
   top: 50%;
   left: auto;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
+
 .ListHeaderBlock_title {
-  font-family: var(--Compact-font);
+  font-family: compacta-bt-bold;
   font-size: 130px;
   text-transform: uppercase;
   line-height: 130px;
@@ -1450,63 +1945,106 @@ a {
   margin: 14px 0 0 0;
   color: #821ae8;
 }
+
 .ListHeaderBlock_description {
   margin-top: 1.25vw;
-  font-family: var(--Ubisoft-font-regular);
+  font-family: Ubisoft-font-regular;
   font-size: 17px;
   line-height: 19px;
 }
+
 .ListHeaderBlock_more {
   display: block;
   width: 14rem;
   position: absolute;
   right: 6.25vw;
   top: 90%;
-  transform: rotate(90deg);
-  transform-origin: top right;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
   margin-right: -3.125em;
   cursor: pointer;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
-.SplittedPreviewBlock .Arrow, .SplittedPreviewBlock .Arrow .Arrow {
-  width: 100%;
-}
-.LabelledArrow_title-black {
-  color: #000;
-}
-.Arrow-black {
-  color: #000;
-}
-.Arrow-white {
-  color: #fff;
-}
-/* Split View Block */
+
 .SplittedPreviewBlock {
   width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   overflow: hidden;
   padding-top: 2.08333333vw;
   padding-bottom: 2.08333333vw;
   min-height: 56vw;
 }
+
+.SplittedPreviewBlock .Arrow {
+  width: 100%;
+}
+
+.SplittedPreviewBlock .Arrow .Arrow {
+  width: 100%;
+}
+
+.SplittedPreviewBlock .TimeCounter {
+  color: #fff;
+}
+
+.LabelledArrow_title-black {
+  color: #000;
+}
+
+.Arrow-black {
+  color: #000;
+}
+
+.Arrow-white {
+  color: #fff;
+}
+
 .SplittedPreviewBlock-interview {
-  flex-direction: row-reverse;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
 }
+
+.SplittedPreviewBlock-interview .SplittedPreviewBlock_mainContainer {
+  background-color: #821ae8;
+}
+
+.SplittedPreviewBlock-interview .SplittedPreviewBlock_watermark {
+  position: absolute;
+  top: 25%;
+  right: -70%;
+}
+
+.SplittedPreviewBlock-interview .SplittedPreviewBlock_image {
+  background-position: center;
+}
+
 .SplittedPreviewBlock-interview.Row {
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
+
+.SplittedPreviewBlock-interview.Row .SplittedPreviewBlock_mainContainer {
+  background-color: #f11d6b;
+}
+
 .SplittedPreviewBlock_mainContainer {
   width: 50vw;
   position: relative;
 }
-.SplittedPreviewBlock-interview .SplittedPreviewBlock_mainContainer {
-  background-color: #821ae8;
-}
-.SplittedPreviewBlock-interview.Row .SplittedPreviewBlock_mainContainer {
-  background-color: #f11d6b;
-}
+
 .SplittedPreviewBlock_watermark {
-  font-family: var(--Compact-font);
+  font-family: compacta-bt-bold;
   font-size: 240px;
   color: #000;
   text-transform: uppercase;
@@ -1514,90 +2052,120 @@ a {
   opacity: .2;
   white-space: nowrap;
   z-index: 0;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
-.SplittedPreviewBlock-interview .SplittedPreviewBlock_watermark {
-  position: absolute;
-  top: 25%;
-  right: -70%;
-}
+
 .SplittedPreviewBlock_previewContainer {
   width: 37.5vw;
   margin: 3.125vw auto 8.75vw auto;
 }
+
 .SplittedPreviewBlock_arrowCounter {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-bottom: 160px;
 }
-.SplittedPreviewBlock_articleLink:hover .Arrow{
+
+.SplittedPreviewBlock_articleLink:hover .Arrow {
   width: 180%;
 }
-.SplittedPreviewBlock .TimeCounter {
-  color: #fff;
-}
+
 .TimeCounter-verticalFat {
   position: relative;
   width: 100px;
   height: 100px;
   background-color: transparent;
 }
+
 .TimeCounter-verticalFat .TimeCounter_duration {
   font-size: 72px;
   position: relative;
   top: .0625em;
   right: .3125em;
   text-align: right;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .TimeCounter-verticalFat .TimeCounter_unit {
   font-size: 13px;
   position: absolute;
   top: 2em;
   right: .5625em;
   width: 0;
-  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
+
 .SplittedPreviewBlock_previewContent {
   position: relative;
 }
+
 .SplittedPreviewBlock_formatLink {
-  color: #57ffab;
   position: relative;
+  font-family: Ubisoft-font;
+  font-size: 20px;
+  color: #57ffab;
+  font-weight: 400;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   cursor: pointer;
-  font-family: var(--Ubisoft-font), sans-serif;
   text-transform: uppercase;
-  font-size: 19px;
-  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
+
 .SplittedPreviewBlock_formatLink:hover .FormatLink_contentTypeLine {
   width: 100%;
 }
+
 .SplittedPreviewBlock_title {
   margin: 25px 0 10px;
-  font-family: var(--Compact-font);
+  font-family: compacta-bt-bold;
   font-size: 62px;
   text-transform: uppercase;
   font-weight: 400;
   color: #fff;
 }
+
 .SplittedPreviewBlock_description {
   margin-bottom: 30px;
-  font-family: var(--Ubisoft-font-regular);
+  font-family: Ubisoft-font-regular;
   font-size: .875em;
   color: #fff;
 }
+
 .RelativeDate-white {
   color: white;
 }
+
 .SplittedPreviewBlock_details {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .SplittedPreviewBlock_image {
   background-image: url("../image/post-square3.jpg");
   width: 50vw;
@@ -1605,80 +2173,111 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
 }
-.SplittedPreviewBlock-interview .SplittedPreviewBlock_image {
-  background-position: center;
-}
-/* Grid Block */
+
 .GridBlock {
   width: 100vw;
   padding-top: 2.08333333vw;
   padding-bottom: 2.08333333vw;
 }
+
 .GridBlock_mainContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   width: 87.5vw;
   margin: 0 auto;
 }
+
 .PostPreview-void {
   pointer-events: none;
 }
-.PostPreview_imageContainer {
-  position: relative;
-  overflow: hidden;
-  background-color: rgba(0,0,0,.05);
-}
+
 .PostPreview-void .PostPreview_imageContainer {
   padding-bottom: 100%;
 }
-.PostPreview-void .PostPreview_contentType, .PostPreview-void .PostPreview_title {
+
+.PostPreview-void .PostPreview_contentType {
   margin-top: 15px;
   cursor: default;
-  background-color: rgba(255,255,255,.1);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
-
-/* THUMPS UP PAGE */
+.PostPreview-void .PostPreview_title {
+  margin-top: 15px;
+  cursor: default;
+  background-color: rgba(255, 255, 255, 0.1);
+}
 
 .DataStandaloneBlock {
   padding-top: 2.08333333vw;
   padding-bottom: 2.08333333vw;
 }
+
 .DataStandaloneBlock_inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .DataStandaloneBlock_formatLink {
-  color: #821ae8;
   position: relative;
-    width: fit-content;
-    cursor: pointer;
-    font-family: var(--Ubisoft-font);
-    text-transform: uppercase;
-    font-size: 19px;
+  font-family: Ubisoft-font;
+  font-size: 20px;
+  color: #821ae8;
+  font-weight: 400;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
+
 .DataStandaloneBlock_number {
-  font-family: var(--Compact-font);
+  font-family: compacta-bt-bold;
   font-size: 240px;
   z-index: 0;
   color: #aaa;
   text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 .DataStandaloneBlock_content {
   position: relative;
   width: 50vw;
   margin: -6.25vw auto 3.125vw auto;
-  font-family: var(--Ubisoft-font);
+  font-family: Ubisoft-font;
   text-transform: uppercase;
   font-size: 19px;
   line-height: 1.25em;
   color: #000;
   text-align: center;
 }
+/*# sourceMappingURL=style.css.map */

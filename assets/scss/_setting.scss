@@ -1,0 +1,55 @@
+html {
+	line-height: 1.15;
+	-webkit-text-size-adjust: 100%;
+	box-sizing: border-box;
+}
+* {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+a {
+	display: block;
+	text-decoration: none;
+	color: inherit;
+}
+
+@font-face {
+	font-family: Ubisoft-font;
+	src: url("../font/ubisoft-font/ubisoft.woff") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: Ubisoft-font-regular;
+	src: url("../font/ubisoft-font/Roboto-Regular.woff") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: compacta-bt-bold;
+	src: url("../font/compact-font/CompactaBT-Bold.woff");
+}
+
+/*Font*/ 
+$comopact-font:compacta-bt-bold;
+$ubisoft-font:Ubisoft-font;
+$ubisoft-regular-font:Ubisoft-font-regular;
+
+/*Color*/
+$white: #fff;
+$black:#000;
+$grey:#888;
+$cayan:#57ffab;
+$pink:#f11d6b;
+$violet: #821ae8;
+
+/*Animation*/ 
+@keyframes fade{
+	from {
+		opacity: 0.6;
+	}
+	to {
+		opacity: 1;
+	}
+}

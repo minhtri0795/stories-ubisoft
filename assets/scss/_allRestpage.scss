@@ -1,0 +1,271 @@
+.ListHeaderBlock {
+	position: relative;
+	margin-top: 0;
+	padding-top: 0;
+	margin-bottom: 50px;
+	visibility: inherit;
+	opacity: 1;
+	transform: translateY(50px);
+}
+.ListHeaderBlock_watermark {
+	position: absolute;
+	top: 47%;
+	left: 70%;
+	transform: translateY(-50%);
+	font-family: $comopact-font;
+	font-size: 240px;
+	color: $grey;
+	text-transform: uppercase;
+	font-weight: 400;
+	opacity: .2;
+	white-space: nowrap;
+	z-index: 0;
+	user-select: none;
+}
+.ListHeaderBlock_mainContainer {
+	padding: 12.5vw 0;
+	position: relative;
+	width: 87.5vw;
+	height: 100%;
+	margin-left: 6.25vw;
+	min-height: 250px;
+}
+.ListHeaderBlock_content {
+	margin-left: 6.25vw;
+	margin-right: 6.25vw;
+	position: absolute;
+	top: 50%;
+	left: auto;
+	transform: translateY(-50%);
+}
+.ListHeaderBlock_title {
+	font-family: $comopact-font;
+	font-size: 130px;
+	text-transform: uppercase;
+	line-height: 130px;
+	font-weight: 400;
+	margin: 14px 0 0 0;
+	color: $violet;
+}
+.ListHeaderBlock_description {
+	margin-top: 1.25vw;
+	font-family: $ubisoft-regular-font;
+	font-size: 17px;
+	line-height: 19px;
+}
+.ListHeaderBlock_more {
+	display: block;
+	width: 14rem;
+	position: absolute;
+	right: 6.25vw;
+	top: 90%;
+	transform: rotate(90deg);
+	transform-origin: top right;
+	margin-right: -3.125em;
+	cursor: pointer;
+	user-select: none;
+}
+.SplittedPreviewBlock {
+	.Arrow {
+		width: 100%;
+		.Arrow {
+			width: 100%;
+		}
+	}
+	width: 100vw;
+	display: flex;
+	overflow: hidden;
+	padding-top: 2.08333333vw;
+	padding-bottom: 2.08333333vw;
+	min-height: 56vw;
+	.TimeCounter {
+		color: $white;
+	}
+}
+.LabelledArrow_title-black {
+	color: $black;
+}
+.Arrow-black {
+	color: $black;
+}
+.Arrow-white {
+	color: $white;
+}
+.SplittedPreviewBlock-interview {
+	flex-direction: row-reverse;
+	.SplittedPreviewBlock_mainContainer {
+		background-color: $violet;
+	}
+	.SplittedPreviewBlock_watermark {
+		position: absolute;
+		top: 25%;
+		right: -70%;
+	}
+	.SplittedPreviewBlock_image {
+		background-position: center;
+	}
+}
+.SplittedPreviewBlock-interview.Row {
+	flex-direction: row;
+	.SplittedPreviewBlock_mainContainer {
+		background-color: $pink;
+	}
+}
+.SplittedPreviewBlock_mainContainer {
+	width: 50vw;
+	position: relative;
+}
+.SplittedPreviewBlock_watermark {
+	font-family: $comopact-font;
+	font-size: 240px;
+	color: $black;
+	text-transform: uppercase;
+	font-weight: 400;
+	opacity: .2;
+	white-space: nowrap;
+	z-index: 0;
+	user-select: none;
+}
+.SplittedPreviewBlock_previewContainer {
+	width: 37.5vw;
+	margin: 3.125vw auto 8.75vw auto;
+}
+.SplittedPreviewBlock_arrowCounter {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 160px;
+}
+.SplittedPreviewBlock_articleLink {
+	&:hover {
+		.Arrow {
+			width: 180%;
+		}
+	}
+}
+.TimeCounter-verticalFat {
+	position: relative;
+	width: 100px;
+	height: 100px;
+	background-color: transparent;
+	.TimeCounter_duration {
+		font-size: 72px;
+		position: relative;
+		top: .0625em;
+		right: .3125em;
+		text-align: right;
+		align-items: center;
+		justify-content: center;
+	}
+	.TimeCounter_unit {
+		font-size: 13px;
+		position: absolute;
+		top: 2em;
+		right: .5625em;
+		width: 0;
+		transform: rotate(90deg);
+	}
+}
+.SplittedPreviewBlock_previewContent {
+	position: relative;
+}
+.SplittedPreviewBlock_formatLink {
+	@include formatLink($cayan);
+	&:hover {
+		.FormatLink_contentTypeLine {
+			width: 100%;
+		}
+	}
+}
+.SplittedPreviewBlock_title {
+	margin: 25px 0 10px;
+	font-family: $comopact-font;
+	font-size: 62px;
+	text-transform: uppercase;
+	font-weight: 400;
+	color: $white;
+}
+.SplittedPreviewBlock_description {
+	margin-bottom: 30px;
+	font-family: $ubisoft-regular-font;
+	font-size: .875em;
+	color: $white;
+}
+.RelativeDate-white {
+	color: white;
+}
+.SplittedPreviewBlock_details {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.SplittedPreviewBlock_image {
+	background-image: url("../image/post-square3.jpg");
+	width: 50vw;
+	height: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.GridBlock {
+	width: 100vw;
+	padding-top: 2.08333333vw;
+	padding-bottom: 2.08333333vw;
+}
+.GridBlock_mainContainer {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	width: 87.5vw;
+	margin: 0 auto;
+}
+.PostPreview-void {
+	pointer-events: none;
+	.PostPreview_imageContainer {
+		padding-bottom: 100%;
+	}
+	.PostPreview_contentType {
+		margin-top: 15px;
+		cursor: default;
+		background-color: rgba(255,255,255,.1);
+	}
+	.PostPreview_title {
+		margin-top: 15px;
+		cursor: default;
+		background-color: rgba(255,255,255,.1);
+	}
+}
+.DataStandaloneBlock {
+	padding-top: 2.08333333vw;
+	padding-bottom: 2.08333333vw;
+}
+.DataStandaloneBlock_inner {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+}
+.DataStandaloneBlock_formatLink {
+	@include formatLink($violet);
+}
+.DataStandaloneBlock_number {
+	font-family: $comopact-font;
+	font-size: 240px;
+	z-index: 0;
+	color: #aaa;
+	text-transform: uppercase;
+	display: flex;
+}
+.DataStandaloneBlock_content {
+	position: relative;
+	width: 50vw;
+	margin: -6.25vw auto 3.125vw auto;
+	font-family: $ubisoft-font;
+	text-transform: uppercase;
+	font-size: 19px;
+	line-height: 1.25em;
+	color: $black;
+	text-align: center;
+}
